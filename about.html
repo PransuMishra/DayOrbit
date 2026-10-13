@@ -1,0 +1,772 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>About DayOrbit | Your Day. Your World.</title>
+
+    <meta
+        name="description"
+        content="Discover DayOrbit, a thoughtfully designed collection of everyday tools for weather, alarms, time management and calendars."
+    >
+
+    <meta name="theme-color" content="#0b1120">
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- DayOrbit branding -->
+    <link rel="stylesheet" href="branding.css">
+
+    <!-- New About page stylesheet -->
+    <link rel="stylesheet" href="about.css">
+
+    <link rel="icon" type="image/png" href="assets/dayorbit-icon.png">
+
+    <!-- Inherit the theme saved on the Home page -->
+    <script>
+        try {
+            const savedTheme = localStorage.getItem("theme") || "dark";
+
+            document.documentElement.classList.toggle(
+                "dark-page",
+                savedTheme === "dark"
+            );
+
+            document.documentElement.classList.toggle(
+                "light-page",
+                savedTheme === "light"
+            );
+        } catch (error) {
+            document.documentElement.classList.add("dark-page");
+        }
+    </script>
+</head>
+
+<body class="about-page" id="top">
+
+    <!-- =====================================
+         NAVBAR
+    ====================================== -->
+
+    <nav class="navbar navbar-expand-lg about-navbar">
+        <div class="container-fluid">
+
+            <a
+                class="navbar-brand dayorbit-brand"
+                href="index.html"
+                aria-label="DayOrbit Home"
+            >
+                <img
+                    src="assets/dayorbit-icon.png"
+                    alt=""
+                    class="dayorbit-mark"
+                >
+
+                <span class="dayorbit-name">
+                    <span class="day-word">Day</span><span class="orbit-word">Orbit</span>
+                </span>
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#aboutNavbarContent"
+                aria-controls="aboutNavbarContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+                class="collapse navbar-collapse"
+                id="aboutNavbarContent"
+            >
+                <ul class="navbar-nav me-auto ms-lg-4">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <!-- Tools -->
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="aboutToolsDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            Tools
+                        </a>
+
+                        <ul
+                            class="dropdown-menu"
+                            aria-labelledby="aboutToolsDropdown"
+                        >
+                            <li>
+                                <a class="dropdown-item" href="weather.html">
+                                    🌤️ Weather
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="alarm.html">
+                                    ⏰ Alarm
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stopwatch.html">
+                                    ⏱️ Stopwatch
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="timer.html">
+                                    ⌛ Timer
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="calendar.html">
+                                    📅 Calendar
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Explore -->
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle active"
+                            href="#"
+                            id="aboutExploreDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            Explore
+                        </a>
+
+                        <ul
+                            class="dropdown-menu"
+                            aria-labelledby="aboutExploreDropdown"
+                        >
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="about.html"
+                                    aria-current="page"
+                                >
+                                    ✨ About App
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="about-developer.html"
+                                >
+                                    👨‍💻 About Developer
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- =====================================
+             HERO
+        ====================================== -->
+
+        <section class="about-hero">
+
+            <div class="hero-noise" aria-hidden="true"></div>
+            <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+            <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+
+            <div class="container-xl about-hero-inner">
+
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-6 hero-copy reveal">
+
+                        <div class="about-eyebrow">
+                            <span class="eyebrow-sparkle">✦</span>
+                            GET TO KNOW DAYORBIT
+                        </div>
+
+                        <h1>
+                            More clarity.
+                            <span class="gradient-text">
+                                More possibilities.
+                            </span>
+                        </h1>
+
+                        <p class="hero-description">
+                            Your day is made up of little moments.
+                            DayOrbit brings helpful everyday tools together
+                            to make those moments easier to manage.
+                        </p>
+
+                        <div class="hero-buttons">
+
+                            <a
+                                href="#our-vision"
+                                class="about-primary-btn"
+                            >
+                                Discover Our Vision
+                                <span>↘</span>
+                            </a>
+
+                            <a
+                                href="#our-tools"
+                                class="about-outline-btn"
+                            >
+                                Explore Features
+                            </a>
+
+                        </div>
+
+                        <div class="hero-trust-line">
+                            <span class="trust-star">✦</span>
+                            One place for your everyday essentials
+                        </div>
+
+                    </div>
+
+                    <!-- Decorative orbit illustration -->
+                    <div class="col-lg-6">
+
+                        <div class="about-orbit-art" aria-hidden="true">
+
+                            <div class="art-aura"></div>
+
+                            <div class="art-orbit art-orbit-back"></div>
+                            <div class="art-orbit art-orbit-middle"></div>
+                            <div class="art-orbit art-orbit-front"></div>
+
+                            <div class="art-core">
+                                <div class="art-core-shine"></div>
+                                <div class="art-sun">☀</div>
+                                <div class="art-cloud">☁</div>
+                            </div>
+
+                            <span class="art-star art-star-one">✦</span>
+                            <span class="art-star art-star-two">✧</span>
+                            <span class="art-star art-star-three">✦</span>
+                            <span class="art-star art-star-four">✧</span>
+
+                            <div class="orbit-chip orbit-chip-weather">
+                                <span>🌤️</span>
+                                <div>
+                                    <strong>Weather</strong>
+                                    <small>Know your day</small>
+                                </div>
+                            </div>
+
+                            <div class="orbit-chip orbit-chip-time">
+                                <span>⏰</span>
+                                <div>
+                                    <strong>Your time</strong>
+                                    <small>Make it count</small>
+                                </div>
+                            </div>
+
+                            <div class="art-caption">
+                                <span class="caption-dot"></span>
+                                YOUR DAY. YOUR WORLD.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <a href="#our-vision" class="hero-scroll-link">
+                    <span></span>
+                    Scroll to explore
+                    <span>↓</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- =====================================
+             OUR VISION
+        ====================================== -->
+
+        <section class="vision-section" id="our-vision">
+
+            <div class="container-xl">
+
+                <div class="vision-layout">
+
+                    <div class="vision-heading reveal">
+
+                        <span class="section-eyebrow">
+                            THE IDEA BEHIND THE APP
+                        </span>
+
+                        <h2>
+                            Your everyday,
+                            <span class="gradient-text">made simpler.</span>
+                        </h2>
+
+                    </div>
+
+                    <div class="vision-copy reveal">
+                        <p>
+                            Sometimes the most useful things are the
+                            simplest ones. Checking the weather, setting
+                            an alarm, measuring time or looking up a date
+                            shouldn't feel complicated.
+                        </p>
+
+                        <p>
+                            DayOrbit brings these everyday essentials
+                            into one consistent space, with a clean
+                            interface designed to make useful information
+                            easier to find and everyday tasks easier to do.
+                        </p>
+
+                        <a href="#our-tools" class="text-link">
+                            See what you can do
+                            <span>→</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="principle-strip">
+
+                    <div class="principle-item reveal">
+                        <span class="principle-number">01</span>
+                        <span class="principle-icon">◈</span>
+                        <h3>Clarity first</h3>
+                        <p>
+                            Useful information without unnecessary clutter.
+                        </p>
+                    </div>
+
+                    <div class="principle-item reveal">
+                        <span class="principle-number">02</span>
+                        <span class="principle-icon">✦</span>
+                        <h3>Made for everyday</h3>
+                        <p>
+                            Practical tools for real daily routines.
+                        </p>
+                    </div>
+
+                    <div class="principle-item reveal">
+                        <span class="principle-number">03</span>
+                        <span class="principle-icon">◎</span>
+                        <h3>One connected space</h3>
+                        <p>
+                            Different essentials, one familiar experience.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =====================================
+             TOOLS AND FEATURES
+        ====================================== -->
+
+        <section class="tools-section" id="our-tools">
+
+            <div class="container-xl">
+
+                <div class="section-heading reveal">
+                    <span class="section-eyebrow">
+                        EXPLORE DAYORBIT
+                    </span>
+
+                    <h2>
+                        Everything you need,
+                        <span class="gradient-text">in one orbit.</span>
+                    </h2>
+
+                    <p>
+                        Five useful tools. One simple place to start.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- WEATHER -->
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <a
+                            href="weather.html"
+                            class="about-tool-card"
+                        >
+                            <div class="tool-card-top">
+                                <div class="tool-icon weather-icon">🌤️</div>
+                                <span class="tool-card-number">01</span>
+                            </div>
+
+                            <h3>Weather Insights</h3>
+
+                            <p>
+                                Discover current conditions, detailed
+                                weather measurements and forecasts to
+                                help plan your day.
+                            </p>
+
+                            <div class="tool-card-link">
+                                Explore Weather <span>↗</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- ALARM -->
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <a
+                            href="alarm.html"
+                            class="about-tool-card"
+                        >
+                            <div class="tool-card-top">
+                                <div class="tool-icon alarm-icon">⏰</div>
+                                <span class="tool-card-number">02</span>
+                            </div>
+
+                            <h3>Alarm Clock</h3>
+
+                            <p>
+                                Set an alarm with a classic ringtone,
+                                then stop it or snooze it when your
+                                reminder arrives.
+                            </p>
+
+                            <div class="tool-card-link">
+                                Set an Alarm <span>↗</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- STOPWATCH -->
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <a
+                            href="stopwatch.html"
+                            class="about-tool-card"
+                        >
+                            <div class="tool-card-top">
+                                <div class="tool-icon stopwatch-icon">⏱️</div>
+                                <span class="tool-card-number">03</span>
+                            </div>
+
+                            <h3>Stopwatch</h3>
+
+                            <p>
+                                Measure elapsed time for study sessions,
+                                fitness routines or any task you want
+                                to track.
+                            </p>
+
+                            <div class="tool-card-link">
+                                Track Time <span>↗</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- TIMER -->
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <a
+                            href="timer.html"
+                            class="about-tool-card"
+                        >
+                            <div class="tool-card-top">
+                                <div class="tool-icon timer-icon">⌛</div>
+                                <span class="tool-card-number">04</span>
+                            </div>
+
+                            <h3>Focus Timer</h3>
+
+                            <p>
+                                Set a time limit for a task, a study
+                                break or any moment that needs a
+                                clear finish.
+                            </p>
+
+                            <div class="tool-card-link">
+                                Open Timer <span>↗</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- CALENDAR -->
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <a
+                            href="calendar.html"
+                            class="about-tool-card"
+                        >
+                            <div class="tool-card-top">
+                                <div class="tool-icon calendar-icon">📅</div>
+                                <span class="tool-card-number">05</span>
+                            </div>
+
+                            <h3>Indian Festival Calendar</h3>
+
+                            <p>
+                                Explore dates, navigate between months
+                                and discover the Indian festivals
+                                highlighted in the calendar.
+                            </p>
+
+                            <div class="tool-card-link">
+                                Open Calendar <span>↗</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- THE EXPERIENCE -->
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="about-tool-card tool-summary-card">
+
+                            <div class="tool-card-top">
+                                <div class="tool-icon summary-icon">✦</div>
+                                <span class="tool-card-number">DAYORBIT</span>
+                            </div>
+
+                            <h3>One familiar experience</h3>
+
+                            <p>
+                                Designed around simplicity, useful
+                                everyday functionality and a consistent
+                                experience across the site.
+                            </p>
+
+                            <div class="tool-summary-note">
+                                <span>✧</span>
+                                YOUR DAY. YOUR WORLD.
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =====================================
+             HOW WE THINK
+        ====================================== -->
+
+        <section class="philosophy-section">
+
+            <div class="container-xl">
+
+                <div class="philosophy-card reveal">
+
+                    <div class="philosophy-decoration" aria-hidden="true">
+                        <div class="philosophy-ring"></div>
+                        <span>✦</span>
+                    </div>
+
+                    <div class="philosophy-content">
+
+                        <span class="section-eyebrow">
+                            OUR PHILOSOPHY
+                        </span>
+
+                        <h2>
+                            Technology should fit your day.
+                            <span class="gradient-text">
+                                Not complicate it.
+                            </span>
+                        </h2>
+
+                        <p>
+                            DayOrbit is built around a simple idea:
+                            bring practical everyday features together
+                            in a welcoming, easy-to-use space. Less
+                            complexity, more focus on what matters to you.
+                        </p>
+
+                        <a
+                            href="index.html"
+                            class="about-primary-btn"
+                        >
+                            Back to Home
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =====================================
+             FINAL CTA
+        ====================================== -->
+
+        <section class="about-cta-section">
+
+            <div class="container-xl">
+
+                <div class="about-cta reveal">
+
+                    <div class="cta-symbol" aria-hidden="true">✧</div>
+
+                    <span class="section-eyebrow">
+                        YOUR NEXT MOMENT STARTS HERE
+                    </span>
+
+                    <h2>
+                        Find your rhythm.
+                        <span class="gradient-text">
+                            Make it count.
+                        </span>
+                    </h2>
+
+                    <p>
+                        Explore DayOrbit and discover the everyday
+                        tools that fit your routine.
+                    </p>
+
+                    <a href="index.html" class="about-primary-btn">
+                        Explore DayOrbit
+                        <span>↗</span>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="about-footer">
+
+        <div class="container-xl">
+
+            <div class="footer-main">
+
+                <div class="footer-brand-block">
+
+                    <a
+                        class="navbar-brand dayorbit-brand"
+                        href="index.html"
+                    >
+                        <img
+                            src="assets/dayorbit-icon.png"
+                            alt=""
+                            class="dayorbit-mark"
+                        >
+
+                        <span class="dayorbit-name">
+                            <span class="day-word">Day</span><span class="orbit-word">Orbit</span>
+                        </span>
+                    </a>
+
+                    <p>
+                        Your day. Your world.
+                        Make every moment count.
+                    </p>
+
+                </div>
+
+                <div class="footer-link-group">
+                    <h3>Explore</h3>
+                    <a href="index.html">Home</a>
+                    <a href="weather.html">Weather</a>
+                    <a href="calendar.html">Calendar</a>
+                </div>
+
+                <div class="footer-link-group">
+                    <h3>Discover</h3>
+                    <a href="alarm.html">Alarm</a>
+                    <a href="timer.html">Timer</a>
+                    <a href="stopwatch.html">Stopwatch</a>
+                </div>
+
+                <div class="footer-link-group">
+                    <h3>About</h3>
+                    <a href="about.html">About DayOrbit</a>
+                    <a href="about-developer.html">About Developer</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <span>
+                    © <span id="aboutYear"></span> DayOrbit
+                </span>
+
+                <span>Built with curiosity and code. ✦</span>
+
+                <a href="#top">Back to top ↑</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript for mobile navbar and dropdowns -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+    <!-- About page animations: progressive enhancement -->
+    <script>
+        document.getElementById("aboutYear").textContent =
+            new Date().getFullYear();
+
+        const revealElements = document.querySelectorAll(".reveal");
+
+        if ("IntersectionObserver" in window) {
+            document.body.classList.add("reveal-enabled");
+
+            const revealObserver = new IntersectionObserver(
+                entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("is-visible");
+                            revealObserver.unobserve(entry.target);
+                        }
+                    });
+                },
+                {
+                    threshold: 0.12,
+                    rootMargin: "0px 0px -35px 0px"
+                }
+            );
+
+            revealElements.forEach(element => {
+                revealObserver.observe(element);
+            });
+        } else {
+            revealElements.forEach(element => {
+                element.classList.add("is-visible");
+            });
+        }
+    </script>
+
+</body>
+</html>

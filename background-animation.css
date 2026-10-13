@@ -1,0 +1,373 @@
+/* =====================================================
+   GLOBAL ANIMATED GRADIENT WAVES
+   Weather App
+===================================================== */
+
+
+/* -----------------------------------------------------
+   BASE PAGE BACKGROUND
+----------------------------------------------------- */
+
+body {
+    position: relative;
+    overflow-x: hidden;
+
+    background:
+        linear-gradient(
+            120deg,
+            #07111f,
+            #101a3d,
+            #172554,
+            #111827
+        );
+
+    background-size: 400% 400%;
+
+    animation:
+        gradientBackground 18s ease infinite;
+}
+
+
+/* -----------------------------------------------------
+   MAIN MOVING GLOW
+----------------------------------------------------- */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    top: -25%;
+    left: -15%;
+
+    width: 70vw;
+    height: 70vw;
+
+    max-width: 900px;
+    max-height: 900px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(59, 130, 246, 0.32) 0%,
+            rgba(59, 130, 246, 0.16) 30%,
+            rgba(59, 130, 246, 0.05) 55%,
+            transparent 72%
+        );
+
+    filter: blur(45px);
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    animation:
+        waveOne 14s ease-in-out infinite alternate;
+}
+
+
+/* -----------------------------------------------------
+   SECOND MOVING GLOW
+----------------------------------------------------- */
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    right: -18%;
+    bottom: -25%;
+
+    width: 75vw;
+    height: 75vw;
+
+    max-width: 950px;
+    max-height: 950px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(124, 58, 237, 0.28) 0%,
+            rgba(99, 102, 241, 0.15) 30%,
+            rgba(99, 102, 241, 0.05) 55%,
+            transparent 72%
+        );
+
+    filter: blur(50px);
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    animation:
+        waveTwo 17s ease-in-out infinite alternate;
+}
+
+
+/* -----------------------------------------------------
+   BASE GRADIENT MOVEMENT
+----------------------------------------------------- */
+
+@keyframes gradientBackground {
+
+    0% {
+
+        background-position:
+            0% 50%;
+
+    }
+
+    25% {
+
+        background-position:
+            50% 100%;
+
+    }
+
+    50% {
+
+        background-position:
+            100% 50%;
+
+    }
+
+    75% {
+
+        background-position:
+            50% 0%;
+
+    }
+
+    100% {
+
+        background-position:
+            0% 50%;
+
+    }
+
+}
+
+
+/* -----------------------------------------------------
+   FIRST WAVE MOVEMENT
+----------------------------------------------------- */
+
+@keyframes waveOne {
+
+    0% {
+
+        transform:
+            translate3d(
+                -5%,
+                -5%,
+                0
+            )
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(
+                25%,
+                18%,
+                0
+            )
+            scale(1.15);
+
+    }
+
+    100% {
+
+        transform:
+            translate3d(
+                5%,
+                30%,
+                0
+            )
+            scale(0.95);
+
+    }
+
+}
+
+
+/* -----------------------------------------------------
+   SECOND WAVE MOVEMENT
+----------------------------------------------------- */
+
+@keyframes waveTwo {
+
+    0% {
+
+        transform:
+            translate3d(
+                5%,
+                10%,
+                0
+            )
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(
+                -25%,
+                -20%,
+                0
+            )
+            scale(1.18);
+
+    }
+
+    100% {
+
+        transform:
+            translate3d(
+                -5%,
+                5%,
+                0
+            )
+            scale(0.96);
+
+    }
+
+}
+
+
+/* =====================================================
+   LIGHT MODE
+===================================================== */
+
+body:not(.dark-mode) {
+
+    background:
+        linear-gradient(
+            120deg,
+            #eaf4ff,
+            #f1f5ff,
+            #eef2ff,
+            #f8faff
+        );
+
+    background-size: 400% 400%;
+}
+
+
+body:not(.dark-mode)::before {
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(59, 130, 246, 0.20) 0%,
+            rgba(96, 165, 250, 0.12) 35%,
+            transparent 70%
+        );
+
+}
+
+
+body:not(.dark-mode)::after {
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(139, 92, 246, 0.16) 0%,
+            rgba(167, 139, 250, 0.10) 35%,
+            transparent 70%
+        );
+
+}
+
+
+/* =====================================================
+   KEEP WEBSITE CONTENT ABOVE ANIMATION
+===================================================== */
+
+.navbar,
+main,
+section,
+.container,
+.developer-page,
+.developer-section,
+.card,
+.weather-card,
+.forecast-card,
+.stopwatch-container,
+.timer-container,
+.calendar-container {
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+/* =====================================================
+   PERFORMANCE
+===================================================== */
+
+body::before,
+body::after {
+
+    will-change:
+        transform;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    body::before {
+
+        width: 100vw;
+        height: 100vw;
+
+        filter:
+            blur(35px);
+
+    }
+
+
+    body::after {
+
+        width: 110vw;
+        height: 110vw;
+
+        filter:
+            blur(40px);
+
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION ACCESSIBILITY
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    body,
+    body::before,
+    body::after {
+
+        animation: none;
+
+    }
+
+}

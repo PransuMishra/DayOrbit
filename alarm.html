@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>DayOrbit | Alarm Clock</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="branding.css">
+    <link rel="stylesheet" href="alarm.css">
+
+    <link rel="icon" type="image/png" href="assets/dayorbit-icon.png">
+
+    <script>
+        try {
+            if (localStorage.getItem("theme") === "dark") {
+                document.documentElement.classList.add("dark-page");
+            }
+        } catch (error) {}
+    </script>
+</head>
+
+<body class="alarm-page">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg alarm-navbar">
+        <div class="container-fluid">
+
+            <a class="navbar-brand dayorbit-brand" href="index.html">
+                <img
+                    src="assets/dayorbit-icon.png"
+                    alt=""
+                    class="dayorbit-mark"
+                >
+                <span class="dayorbit-name">
+                    <span class="day-word">Day</span><span class="orbit-word">Orbit</span>
+                </span>
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#alarmNavbarContent"
+                aria-controls="alarmNavbarContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="alarmNavbarContent">
+
+                <ul class="navbar-nav me-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="alarmToolsDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            Tools
+                        </a>
+
+                        <ul class="dropdown-menu"
+                            aria-labelledby="alarmToolsDropdown">
+                            
+                            <li>
+                                <a class="dropdown-item" href="weather.html">
+                                    🌤️ Weather
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="alarm.html">
+                                    ⏰ Alarm
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="stopwatch.html">
+                                    ⏱️ Stopwatch
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="timer.html">
+                                    ⏳ Timer
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="calendar.html">
+                                    📅 Calendar
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="alarmExploreDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            Explore
+                        </a>
+
+                        <ul class="dropdown-menu"
+                            aria-labelledby="alarmExploreDropdown">
+                            <li>
+                                <a class="dropdown-item" href="about.html">
+                                    ✨ About App
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                   href="about-developer.html">
+                                    👨‍💻 About Developer
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <!-- <button
+                    type="button"
+                    class="btn btn-outline-secondary btn-sm"
+                    id="alarmThemeToggle"
+                >
+                    🌙 Dark Mode
+                </button> -->
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Alarm -->
+    <main class="alarm-shell">
+
+        <header class="alarm-heading">
+            <span class="alarm-eyebrow">DAYORBIT TIME TOOLS</span>
+            <h1>Alarm Clock</h1>
+            <p>A little reminder, right on time.</p>
+        </header>
+
+        <section class="alarm-grid">
+
+            <!-- Live Clock -->
+            <div class="alarm-clock-panel">
+
+                <div class="clock-icon">⏰</div>
+
+                <p class="clock-label">CURRENT TIME</p>
+
+                <div id="liveTime" class="live-time">
+                    --:--:--
+                </div>
+
+                <p id="liveDate" class="live-date">
+                    Loading date...
+                </p>
+
+                <div class="clock-divider"></div>
+
+                <p class="clock-note">
+                    Make every moment count.
+                </p>
+
+            </div>
+
+            <!-- Set Alarm -->
+            <div class="alarm-form-panel">
+
+                <div class="panel-heading">
+                    <span class="panel-icon">🔔</span>
+                    <div>
+                        <h2>Set Your Alarm</h2>
+                        <p>Choose when you want to be reminded.</p>
+                    </div>
+                </div>
+
+                <form id="alarmForm">
+
+                    <label for="alarmTime" class="form-label">
+                        Alarm time
+                    </label>
+
+                    
+<label for="alarmHour" class="form-label">
+    Alarm time
+</label>
+
+<div class="alarm-time-picker">
+
+    <select
+        id="alarmHour"
+        class="form-select alarm-time-select"
+        aria-label="Hour"
+        required
+    ></select>
+
+    <span class="time-separator">:</span>
+
+    <select
+        id="alarmMinute"
+        class="form-select alarm-time-select"
+        aria-label="Minute"
+        required
+    ></select>
+
+    <select
+        id="alarmPeriod"
+        class="form-select alarm-time-select"
+        aria-label="AM or PM"
+        required
+    >
+        <option value="AM">AM</option>
+        <option value="PM">PM</option>
+    </select>
+
+</div>
+
+                    <button
+                        type="submit"
+                        class="btn set-alarm-btn w-100"
+                    >
+                        <span>⏰</span> Set Alarm
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancelAlarmBtn"
+                        class="btn cancel-alarm-btn w-100"
+                        disabled
+                    >
+                        Cancel Alarm
+                    </button>
+
+                </form>
+
+                <div
+                    id="activeAlarmBox"
+                    class="active-alarm-box"
+                    hidden
+                >
+                    <span>🔔</span>
+                    <span id="activeAlarmText"></span>
+                </div>
+
+                <p id="alarmStatus"
+                   class="alarm-status"
+                   role="status"
+                   aria-live="polite">
+                    No alarm set. Choose a time to begin.
+                </p>
+
+                <div class="ringtone-note">
+                    <span>♫</span>
+                    Classic two-tone ringtone
+                </div>
+
+            </div>
+
+        </section>
+
+        <p class="alarm-footer">
+            Made for your time, by <strong>DayOrbit</strong>.
+        </p>
+
+    </main>
+
+    <!-- Alarm Ringing Overlay -->
+    <div
+        id="ringOverlay"
+        class="ring-overlay"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="ringTitle"
+        hidden
+    >
+        <div class="ring-dialog">
+
+            <div class="ring-bell">🔔</div>
+
+            <p class="ring-eyebrow">DAYORBIT ALARM</p>
+
+            <h2 id="ringTitle">Time to wake up!</h2>
+
+            <div id="ringTime" class="ring-time">--:--</div>
+
+            <p class="ring-message">
+                Your alarm is ringing. Have a great day!
+            </p>
+
+            <button
+                type="button"
+                id="snoozeAlarmBtn"
+                class="btn snooze-btn w-100"
+            >
+                Snooze · 5 Minutes
+            </button>
+
+            <button
+                type="button"
+                id="stopAlarmBtn"
+                class="btn stop-alarm-btn w-100"
+            >
+                Stop Alarm
+            </button>
+
+        </div>
+    </div>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+    <script src="alarm.js"></script>
+
+</body>
+</html>

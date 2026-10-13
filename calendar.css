@@ -1,0 +1,1734 @@
+/* =========================================
+   CALENDAR PAGE
+========================================= */
+
+.calendar-page {
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding:
+    55px 20px 80px;
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.calendar-header {
+
+  text-align: center;
+
+  margin-bottom: 25px;
+
+  animation:
+    calendarEntry
+    0.7s
+    ease-out;
+
+}
+
+
+@keyframes calendarEntry {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(25px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+
+.calendar-badge {
+
+  display:
+    inline-block;
+
+  padding:
+    8px 17px;
+
+  border-radius:
+    50px;
+
+  background:
+    rgba(
+      59,
+      130,
+      246,
+      0.11
+    );
+
+  color:
+    #2563eb;
+
+  font-weight:
+    700;
+
+  margin-bottom:
+    12px;
+
+}
+
+
+.calendar-header h1 {
+
+  font-size:
+    3.3rem;
+
+  font-weight:
+    800;
+
+  margin-bottom:
+    8px;
+
+}
+
+
+.calendar-header p {
+
+  color:
+    #64748b;
+
+}
+
+
+/* =========================================
+   HOME BUTTON
+========================================= */
+
+.calendar-home-row {
+
+  margin-bottom:
+    25px;
+
+}
+
+
+.calendar-home-btn {
+
+  display:
+    inline-block;
+
+  text-decoration:
+    none;
+
+  padding:
+    10px 17px;
+
+  border:
+    1px solid #3b82f6;
+
+  border-radius:
+    11px;
+
+  color:
+    #2563eb;
+
+  font-weight:
+    600;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+
+}
+
+
+.calendar-home-btn:hover {
+
+  transform:
+    translateY(-3px);
+
+  background:
+    #3b82f6;
+
+  color:
+    white;
+
+}
+
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.calendar-layout {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    300px;
+
+  gap:
+    22px;
+
+  align-items:
+    start;
+
+}
+
+
+/* =========================================
+   CALENDAR CARD
+========================================= */
+
+.calendar-main-card {
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.94
+    );
+
+  border-radius:
+    26px;
+
+  padding:
+    25px;
+
+  box-shadow:
+    0 18px 45px
+    rgba(
+      0,
+      0,
+      0,
+      0.08
+    );
+
+  animation:
+    calendarEntry
+    0.85s
+    ease-out;
+
+}
+
+
+/* =========================================
+   TOOLBAR
+========================================= */
+
+.calendar-toolbar {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    15px;
+
+  margin-bottom:
+    25px;
+
+}
+
+
+.month-title {
+
+  text-align:
+    center;
+
+}
+
+
+.month-title h2 {
+
+  font-size:
+    1.8rem;
+
+  font-weight:
+    800;
+
+  margin:
+    0 0 7px;
+
+}
+
+
+.month-nav-btn {
+
+  width:
+    45px;
+
+  height:
+    45px;
+
+  border:
+    none;
+
+  border-radius:
+    12px;
+
+  background:
+    #eef4ff;
+
+  color:
+    #2563eb;
+
+  font-size:
+    1.4rem;
+
+  font-weight:
+    700;
+
+  cursor:
+    pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+
+}
+
+
+.month-nav-btn:hover {
+
+  transform:
+    scale(1.06);
+
+  background:
+    #dbeafe;
+
+}
+
+
+.today-btn {
+
+  border:
+    none;
+
+  padding:
+    5px 13px;
+
+  border-radius:
+    50px;
+
+  background:
+    #e0e7ff;
+
+  color:
+    #4338ca;
+
+  font-size:
+    0.76rem;
+
+  font-weight:
+    700;
+
+}
+
+
+/* =========================================
+   MONTH/YEAR SEARCH
+========================================= */
+
+.date-search {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr 1fr auto;
+
+  gap:
+    12px;
+
+  padding:
+    15px;
+
+  margin-bottom:
+    22px;
+
+  background:
+    #f8fafc;
+
+  border-radius:
+    16px;
+
+}
+
+
+.date-input-group {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    5px;
+
+}
+
+
+.date-input-group label {
+
+  font-size:
+    0.75rem;
+
+  color:
+    #64748b;
+
+  font-weight:
+    700;
+
+}
+
+
+.date-input-group select,
+.date-input-group input {
+
+  width:
+    100%;
+
+  height:
+    43px;
+
+  border:
+    1px solid #dbe3ec;
+
+  border-radius:
+    10px;
+
+  padding:
+    0 10px;
+
+  background:
+    white;
+
+  color:
+    #334155;
+
+  outline:
+    none;
+
+}
+
+
+.date-input-group select:focus,
+.date-input-group input:focus {
+
+  border-color:
+    #3b82f6;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      59,
+      130,
+      246,
+      0.10
+    );
+
+}
+
+
+.go-date-btn {
+
+  align-self:
+    end;
+
+  height:
+    43px;
+
+  border:
+    none;
+
+  border-radius:
+    10px;
+
+  padding:
+    0 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #3b82f6,
+      #6366f1
+    );
+
+  color:
+    white;
+
+  font-weight:
+    700;
+
+  transition:
+    transform 0.25s ease;
+
+}
+
+
+.go-date-btn:hover {
+
+  transform:
+    translateY(-3px);
+
+}
+
+
+/* =========================================
+   WEEK DAYS
+========================================= */
+
+.calendar-weekdays {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(7, 1fr);
+
+  gap:
+    8px;
+
+  margin-bottom:
+    8px;
+
+}
+
+
+.calendar-weekdays div {
+
+  text-align:
+    center;
+
+  font-size:
+    0.78rem;
+
+  font-weight:
+    800;
+
+  color:
+    #64748b;
+
+  padding:
+    9px 0;
+
+}
+
+
+/* =========================================
+   CALENDAR GRID
+========================================= */
+
+.calendar-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(7, 1fr);
+
+  gap:
+    8px;
+
+}
+
+
+/* =========================================
+   CALENDAR DATE
+========================================= */
+
+.calendar-day {
+
+  min-height:
+    88px;
+
+  border:
+    1px solid #edf1f5;
+
+  border-radius:
+    15px;
+
+  background:
+    #ffffff;
+
+  color:
+    #334155;
+
+  padding:
+    9px;
+
+  cursor:
+    pointer;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  justify-content:
+    flex-start;
+
+  gap:
+    5px;
+
+  position:
+    relative;
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease;
+
+}
+
+
+.calendar-day:hover {
+
+  transform:
+    translateY(-4px);
+
+  border-color:
+    #93c5fd;
+
+  box-shadow:
+    0 8px 20px
+    rgba(
+      59,
+      130,
+      246,
+      0.10
+    );
+
+}
+
+
+.day-number {
+
+  font-size:
+    1rem;
+
+  font-weight:
+    800;
+
+}
+
+
+.outside-month {
+
+  opacity:
+    0.33;
+
+}
+
+
+.today-date {
+
+  border:
+    2px solid #3b82f6;
+
+  background:
+    #eff6ff;
+
+}
+
+
+.today-date::after {
+
+  content:
+    "TODAY";
+
+  position:
+    absolute;
+
+  top:
+    5px;
+
+  right:
+    7px;
+
+  font-size:
+    0.48rem;
+
+  color:
+    #2563eb;
+
+  font-weight:
+    800;
+
+}
+
+
+/* =========================================
+   FESTIVAL DATE
+========================================= */
+
+.festival-date {
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffaf0,
+      #ffffff
+    );
+
+  border-color:
+    #f5c97a;
+
+}
+
+
+.festival-date:hover {
+
+  border-color:
+    #f59e0b;
+
+  box-shadow:
+    0 9px 22px
+    rgba(
+      245,
+      158,
+      11,
+      0.13
+    );
+
+}
+
+
+.festival-dot {
+
+  font-size:
+    1.25rem;
+
+  line-height:
+    1;
+
+}
+
+
+.festival-short-name {
+
+  font-size:
+    0.62rem;
+
+  color:
+    #b45309;
+
+  font-weight:
+    700;
+
+  max-width:
+    100%;
+
+  white-space:
+    nowrap;
+
+  overflow:
+    hidden;
+
+  text-overflow:
+    ellipsis;
+
+}
+
+
+/* =========================================
+   FESTIVAL SIDEBAR
+========================================= */
+
+.festival-sidebar {
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.94
+    );
+
+  border-radius:
+    23px;
+
+  padding:
+    22px;
+
+  box-shadow:
+    0 15px 35px
+    rgba(
+      0,
+      0,
+      0,
+      0.07
+    );
+
+  animation:
+    calendarEntry
+    1s
+    ease-out;
+
+}
+
+
+.festival-header {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    12px;
+
+  padding-bottom:
+    15px;
+
+  border-bottom:
+    1px solid #e5e7eb;
+
+}
+
+
+.festival-header > span {
+
+  font-size:
+    1.8rem;
+
+}
+
+
+.festival-header h3 {
+
+  font-size:
+    1.25rem;
+
+  font-weight:
+    800;
+
+  margin:
+    0;
+
+}
+
+
+.festival-header p {
+
+  margin:
+    3px 0 0;
+
+  color:
+    #94a3b8;
+
+  font-size:
+    0.77rem;
+
+}
+
+
+/* =========================================
+   FESTIVAL LIST
+========================================= */
+
+.festival-list {
+
+  margin-top:
+    15px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    10px;
+
+}
+
+
+.festival-item {
+
+  width:
+    100%;
+
+  border:
+    1px solid #edf1f5;
+
+  border-radius:
+    14px;
+
+  background:
+    #ffffff;
+
+  padding:
+    12px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    11px;
+
+  text-align:
+    left;
+
+  cursor:
+    pointer;
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    background 0.22s ease;
+
+}
+
+
+.festival-item:hover {
+
+  transform:
+    translateX(5px);
+
+  background:
+    #fffbeb;
+
+  box-shadow:
+    0 7px 17px
+    rgba(
+      0,
+      0,
+      0,
+      0.06
+    );
+
+}
+
+
+.festival-item-icon {
+
+  width:
+    40px;
+
+  height:
+    40px;
+
+  border-radius:
+    12px;
+
+  background:
+    #fff7e6;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  font-size:
+    1.3rem;
+
+  flex-shrink:
+    0;
+
+}
+
+
+.festival-item-info {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  min-width:
+    0;
+
+}
+
+
+.festival-item-info strong {
+
+  font-size:
+    0.86rem;
+
+  color:
+    #334155;
+
+}
+
+
+.festival-item-info span {
+
+  color:
+    #94a3b8;
+
+  font-size:
+    0.72rem;
+
+  margin-top:
+    3px;
+
+}
+
+
+.no-festival {
+
+  padding:
+    30px 15px;
+
+  text-align:
+    center;
+
+  color:
+    #94a3b8;
+
+}
+
+
+.no-festival div {
+
+  font-size:
+    2rem;
+
+  margin-bottom:
+    8px;
+
+}
+
+
+.no-festival p {
+
+  font-size:
+    0.8rem;
+
+  line-height:
+    1.5;
+
+}
+
+
+/* =========================================
+   SELECTED DATE
+========================================= */
+
+.selected-date-card {
+
+  margin-top:
+    22px;
+
+  padding:
+    24px;
+
+  border-radius:
+    22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef6ff,
+      #f8f5ff
+    );
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    18px;
+
+  box-shadow:
+    0 12px 30px
+    rgba(
+      0,
+      0,
+      0,
+      0.06
+    );
+
+}
+
+
+.selected-date-icon {
+
+  width:
+    65px;
+
+  height:
+    65px;
+
+  border-radius:
+    18px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.8
+    );
+
+  font-size:
+    2rem;
+
+  flex-shrink:
+    0;
+
+}
+
+
+.selected-date-label {
+
+  font-size:
+    0.75rem;
+
+  text-transform:
+    uppercase;
+
+  letter-spacing:
+    0.6px;
+
+  font-weight:
+    800;
+
+  color:
+    #64748b;
+
+}
+
+
+.selected-date-content h2 {
+
+  margin:
+    4px 0 0;
+
+  font-size:
+    1.5rem;
+
+  font-weight:
+    800;
+
+}
+
+
+.selected-date-content > p {
+
+  margin:
+    3px 0 12px;
+
+  color:
+    #64748b;
+
+}
+
+
+.selected-festival {
+
+  display:
+    flex;
+
+  align-items:
+    flex-start;
+
+  gap:
+    10px;
+
+}
+
+
+.selected-festival-icon {
+
+  font-size:
+    1.5rem;
+
+}
+
+
+.selected-festival div {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+}
+
+
+.selected-festival strong {
+
+  font-size:
+    0.95rem;
+
+}
+
+
+.selected-festival small {
+
+  color:
+    #64748b;
+
+  margin-top:
+    2px;
+
+}
+
+
+.selected-festival p {
+
+  margin:
+    4px 0 0;
+
+  color:
+    #64748b;
+
+  font-size:
+    0.82rem;
+
+}
+
+
+.date-selected-animation {
+
+  animation:
+    selectedDateAnimation
+    0.45s
+    ease-out;
+
+}
+
+
+@keyframes selectedDateAnimation {
+
+  from {
+
+    opacity:
+      0.4;
+
+    transform:
+      translateY(8px);
+
+  }
+
+  to {
+
+    opacity:
+      1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+html.dark-page,
+html.dark-page body {
+
+  background:
+    #0f172a;
+
+  color:
+    #e2e8f0;
+
+}
+
+
+html.dark-page .navbar {
+
+  background:
+    #111827 !important;
+
+}
+
+
+html.dark-page .navbar-brand,
+html.dark-page .nav-link {
+
+  color:
+    #e2e8f0 !important;
+
+}
+
+
+html.dark-page .calendar-header p {
+
+  color:
+    #94a3b8;
+
+}
+
+
+html.dark-page .calendar-main-card,
+html.dark-page .festival-sidebar {
+
+  background:
+    #1e293b;
+
+  color:
+    #e2e8f0;
+
+}
+
+
+html.dark-page .calendar-badge {
+
+  background:
+    rgba(
+      96,
+      165,
+      250,
+      0.12
+    );
+
+  color:
+    #60a5fa;
+
+}
+
+
+html.dark-page .calendar-home-btn {
+
+  color:
+    #60a5fa;
+
+  border-color:
+    #60a5fa;
+
+}
+
+
+html.dark-page .calendar-home-btn:hover {
+
+  background:
+    #2563eb;
+
+  color:
+    white;
+
+}
+
+
+html.dark-page .month-nav-btn {
+
+  background:
+    #334155;
+
+  color:
+    #93c5fd;
+
+}
+
+
+html.dark-page .month-nav-btn:hover {
+
+  background:
+    #475569;
+
+}
+
+
+html.dark-page .today-btn {
+
+  background:
+    #312e81;
+
+  color:
+    #c7d2fe;
+
+}
+
+
+html.dark-page .date-search {
+
+  background:
+    #0f172a;
+
+}
+
+
+html.dark-page .date-input-group label {
+
+  color:
+    #94a3b8;
+
+}
+
+
+html.dark-page .date-input-group select,
+html.dark-page .date-input-group input {
+
+  background:
+    #1e293b;
+
+  color:
+    #e2e8f0;
+
+  border-color:
+    #475569;
+
+}
+
+
+html.dark-page .calendar-weekdays div {
+
+  color:
+    #94a3b8;
+
+}
+
+
+html.dark-page .calendar-day {
+
+  background:
+    #1e293b;
+
+  color:
+    #e2e8f0;
+
+  border-color:
+    #334155;
+
+}
+
+
+html.dark-page .calendar-day:hover {
+
+  border-color:
+    #60a5fa;
+
+  box-shadow:
+    0 8px 20px
+    rgba(
+      59,
+      130,
+      246,
+      0.12
+    );
+
+}
+
+
+html.dark-page .today-date {
+
+  background:
+    #172554;
+
+  border-color:
+    #60a5fa;
+
+}
+
+
+html.dark-page .today-date::after {
+
+  color:
+    #60a5fa;
+
+}
+
+
+html.dark-page .festival-date {
+
+  background:
+    linear-gradient(
+      145deg,
+      #3b2f19,
+      #1e293b
+    );
+
+  border-color:
+    #a16207;
+
+}
+
+
+html.dark-page .festival-short-name {
+
+  color:
+    #fbbf24;
+
+}
+
+
+html.dark-page .festival-header {
+
+  border-color:
+    #334155;
+
+}
+
+
+html.dark-page .festival-header p {
+
+  color:
+    #64748b;
+
+}
+
+
+html.dark-page .festival-item {
+
+  background:
+    #0f172a;
+
+  border-color:
+    #334155;
+
+}
+
+
+html.dark-page .festival-item:hover {
+
+  background:
+    #292524;
+
+}
+
+
+html.dark-page .festival-item-icon {
+
+  background:
+    #3b2f19;
+
+}
+
+
+html.dark-page .festival-item-info strong {
+
+  color:
+    #e2e8f0;
+
+}
+
+
+html.dark-page .selected-date-card {
+
+  background:
+    linear-gradient(
+      135deg,
+      #172554,
+      #312e81
+    );
+
+}
+
+
+html.dark-page .selected-date-icon {
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.08
+    );
+
+}
+
+
+html.dark-page .selected-date-label,
+html.dark-page .selected-date-content > p,
+html.dark-page .selected-festival small,
+html.dark-page .selected-festival p {
+
+  color:
+    #94a3b8;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .calendar-layout {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .festival-sidebar {
+
+    order:
+      2;
+
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .calendar-page {
+
+    padding:
+      40px 12px 60px;
+
+  }
+
+
+  .calendar-header h1 {
+
+    font-size:
+      2.5rem;
+
+  }
+
+
+  .calendar-main-card {
+
+    padding:
+      15px;
+
+    border-radius:
+      20px;
+
+  }
+
+
+  .date-search {
+
+    grid-template-columns:
+      1fr 1fr;
+
+  }
+
+
+  .go-date-btn {
+
+    width:
+      100%;
+
+    grid-column:
+      span 2;
+
+  }
+
+
+  .calendar-grid {
+
+    gap:
+      5px;
+
+  }
+
+
+  .calendar-day {
+
+    min-height:
+      65px;
+
+    padding:
+      6px 3px;
+
+    border-radius:
+      11px;
+
+  }
+
+
+  .day-number {
+
+    font-size:
+      0.85rem;
+
+  }
+
+
+  .festival-dot {
+
+    font-size:
+      1rem;
+
+  }
+
+
+  .festival-short-name {
+
+    display:
+      none;
+
+  }
+
+
+  .calendar-weekdays {
+
+    gap:
+      5px;
+
+  }
+
+
+  .calendar-weekdays div {
+
+    font-size:
+      0.68rem;
+
+  }
+
+
+  .month-title h2 {
+
+    font-size:
+      1.35rem;
+
+  }
+
+
+  .selected-date-card {
+
+    padding:
+      18px;
+
+  }
+
+}
+

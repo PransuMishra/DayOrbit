@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>DayOrbit : Daily Forecast</title>
+
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+
+  <!-- Main CSS -->
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+  <script>
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark-page");
+  }
+</script>
+<link rel="stylesheet" href="branding.css">
+</head>
+
+
+<body>
+
+
+  <!-- ==============================
+       NAVBAR
+  =============================== -->
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+    <div class="container-fluid">
+
+      
+<a class="navbar-brand dayorbit-brand"
+   href="index.html"
+   aria-label="DayOrbit home">
+
+    <img
+        src="assets/dayorbit-icon.png"
+        alt=""
+        class="dayorbit-mark"
+    >
+
+    <span class="dayorbit-name"><span class="day-word">Day</span><span class="orbit-word">Orbit</span></span>
+</a>
+
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarContent"
+      >
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+
+      <div
+        class="collapse navbar-collapse"
+        id="navbarContent"
+      >
+
+        
+<ul class="navbar-nav me-auto">
+
+    <!-- Home -->
+    <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+    </li>
+
+    <!-- Tools Dropdown -->
+    <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="toolsDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+        >
+            Tools
+        </a>
+
+        <ul class="dropdown-menu" aria-labelledby="toolsDropdown">
+          <li>
+            <a class="dropdown-item" href="weather.html">
+                🌤️ Weather
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="alarm.html">
+              ⏰ Alarm
+            </a>
+        </li>
+            <li>
+                <a class="dropdown-item" href="stopwatch.html">
+                    ⏱️ Stopwatch
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="timer.html">
+                    ⏳ Timer
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="calendar.html">
+                    📅 Calendar
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    <!-- Explore Dropdown -->
+    <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="exploreDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+        >
+            Explore
+        </a>
+
+        <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+            <li>
+                <a class="dropdown-item" href="about.html">
+                    ✨ About App
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="about-developer.html">
+                    👨‍💻 About Developer
+                </a>
+            </li>
+        </ul>
+    </li>
+
+</ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+  <!-- ==============================
+       MAIN CONTENT
+  =============================== -->
+
+  <div class="container my-5">
+
+
+    <!-- Back Button -->
+
+    <div class="mb-4">
+
+      <a
+        href="index.html"
+        class="btn btn-outline-primary"
+      >
+        ← Back 
+      </a>
+
+    </div>
+
+
+
+    <!-- Selected Day -->
+
+    <div class="text-center mb-5">
+
+      <div
+        id="selectedDate"
+        class="selected-date"
+      >
+        Wednesday, October 7
+      </div>
+
+
+      <h2 id="selectedCity">
+        New Delhi
+      </h2>
+
+
+      <p
+        id="selectedCountry"
+        class="text-muted"
+      >
+        India
+      </p>
+
+    </div>
+
+
+
+    <!-- ==============================
+         DAY SUMMARY
+    =============================== -->
+
+    <div class="row justify-content-center mb-5">
+
+      <div class="col-lg-6">
+
+        <div class="selected-day-card">
+
+          <div
+            id="selectedIcon"
+            class="selected-weather-icon"
+          >
+            🌤️
+          </div>
+
+
+          <div
+            id="selectedCondition"
+            class="selected-condition"
+          >
+            Partly Cloudy
+          </div>
+
+
+          <div class="selected-temperature">
+
+            <span id="selectedMax">
+              35°
+            </span>
+
+            <span>
+              /
+            </span>
+
+            <span
+              id="selectedMin"
+              class="selected-min"
+            >
+              25°
+            </span>
+
+          </div>
+
+
+          <div
+            id="selectedFeels"
+            class="selected-feels"
+          >
+            Feels 37° / 29°
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- ==============================
+         DAY DETAILS
+    =============================== -->
+
+    <h3 class="section-title">
+      Weather Details
+    </h3>
+
+
+    <div
+      class="row g-3 mb-5"
+      id="selectedDetails"
+    >
+
+      <!-- Filled by JavaScript -->
+
+    </div>
+
+
+
+    <!-- ==============================
+         HOURLY FORECAST
+    =============================== -->
+
+    <div class="hourly-heading">
+
+      <h3>
+        ⏰ Hourly Forecast
+      </h3>
+
+      <p>
+        Weather throughout the selected day
+      </p>
+
+    </div>
+
+
+    <div
+      id="selectedHourlyForecast"
+      class="selected-hourly-container"
+    >
+
+      <!-- Filled by JavaScript -->
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- Bootstrap JS -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+
+  <!-- Forecast JavaScript -->
+
+  <script src="forecast.js"></script>
+
+</body>
+
+</html>

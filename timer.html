@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>DayOrbit : Timer</title>
+
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+
+  <!-- Common CSS -->
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+
+  <!-- Timer CSS -->
+  <link
+    rel="stylesheet"
+    href="timer.css"
+  >
+
+
+  <!--
+    Read the theme selected on Home page.
+    No theme button on this page.
+  -->
+
+  <script>
+
+    if (
+      localStorage.getItem("theme") === "dark"
+    ) {
+
+      document.documentElement.classList.add(
+        "dark-page"
+      );
+
+    }
+
+  </script>
+<link rel="stylesheet" href="branding.css">
+</head>
+
+
+<body>
+
+
+  <!-- ======================================
+       NAVBAR
+  ======================================= -->
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+    <div class="container-fluid">
+
+      
+<a class="navbar-brand dayorbit-brand"
+   href="index.html"
+   aria-label="DayOrbit home">
+
+    <img
+        src="assets/dayorbit-icon.png"
+        alt=""
+        class="dayorbit-mark"
+    >
+
+    <span class="dayorbit-name"><span class="day-word">Day</span><span class="orbit-word">Orbit</span></span>
+</a>
+
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarContent"
+        aria-controls="navbarContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+
+      <div
+        class="collapse navbar-collapse"
+        id="navbarContent"
+      >
+
+        
+<ul class="navbar-nav me-auto">
+
+    <!-- Home -->
+    <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+    </li>
+
+    <!-- Tools Dropdown -->
+    <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="toolsDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+        >
+            Tools
+        </a>
+
+        <ul class="dropdown-menu" aria-labelledby="toolsDropdown">
+          <li>
+            <a class="dropdown-item" href="weather.html">
+                🌤️ Weather
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="alarm.html">
+              ⏰ Alarm
+            </a>
+          </li>
+            <li>
+                <a class="dropdown-item" href="stopwatch.html">
+                    ⏱️ Stopwatch
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="timer.html">
+                    ⏳ Timer
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="calendar.html">
+                    📅 Calendar
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    <!-- Explore Dropdown -->
+    <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="exploreDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+        >
+            Explore
+        </a>
+
+        <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+            <li>
+                <a class="dropdown-item" href="about.html">
+                    ✨ About App
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="about-developer.html">
+                    👨‍💻 About Developer
+                </a>
+            </li>
+        </ul>
+    </li>
+
+</ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+  <!-- ======================================
+       TIMER PAGE
+  ======================================= -->
+
+  <main class="timer-page">
+
+
+    <!-- Heading -->
+
+    <section class="timer-heading">
+
+      <div class="timer-badge">
+        ⏳ Precision Countdown
+      </div>
+
+
+      <h1>
+        Countdown Timer
+      </h1>
+
+
+      <p>
+        Set your time, stay focused and let the timer do the rest.
+      </p>
+
+    </section>
+
+
+
+    <!-- Return Home -->
+
+    <div class="timer-home-button">
+
+      <a
+        href="index.html"
+        class="return-home-btn"
+      >
+        ← Return to Home
+      </a>
+
+    </div>
+
+
+
+    <!-- ======================================
+         TIMER CARD
+    ======================================= -->
+
+    <section class="timer-main-card">
+
+
+      <!-- Status -->
+
+      <div
+        id="timerStatus"
+        class="timer-status"
+      >
+        ● Ready
+      </div>
+
+
+      <!-- Circular Timer -->
+
+      <div
+        id="timerRing"
+        class="countdown-ring"
+      >
+
+        <div class="countdown-inner">
+
+          <div
+            id="timerDisplay"
+            class="timer-display"
+          >
+            00:10:00
+          </div>
+
+
+          <div
+            id="timerLabel"
+            class="timer-label"
+          >
+            Ready
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ======================================
+           CUSTOM TIME
+      ======================================= -->
+
+      <div class="custom-time-section">
+
+        <h3>
+          Set Timer
+        </h3>
+
+
+        <div class="time-inputs">
+
+
+          <!-- Hours -->
+
+          <div class="time-input-group">
+
+            <label for="hoursInput">
+              Hours
+            </label>
+
+            <input
+              id="hoursInput"
+              type="number"
+              min="0"
+              max="99"
+              value="0"
+            >
+
+          </div>
+
+
+          <span class="input-separator">
+            :
+          </span>
+
+
+          <!-- Minutes -->
+
+          <div class="time-input-group">
+
+            <label for="minutesInput">
+              Minutes
+            </label>
+
+            <input
+              id="minutesInput"
+              type="number"
+              min="0"
+              max="59"
+              value="10"
+            >
+
+          </div>
+
+
+          <span class="input-separator">
+            :
+          </span>
+
+
+          <!-- Seconds -->
+
+          <div class="time-input-group">
+
+            <label for="secondsInput">
+              Seconds
+            </label>
+
+            <input
+              id="secondsInput"
+              type="number"
+              min="0"
+              max="59"
+              value="0"
+            >
+
+          </div>
+
+        </div>
+
+
+        <button
+          id="setTimeBtn"
+          class="set-time-btn"
+          type="button"
+        >
+          ✓ Set Time
+        </button>
+
+      </div>
+
+
+
+      <!-- ======================================
+           CONTROLS
+      ======================================= -->
+
+      <div class="timer-controls">
+
+
+        <button
+          id="startPauseBtn"
+          class="timer-btn start-btn"
+          type="button"
+        >
+          ▶ Start
+        </button>
+
+
+        <button
+          id="resetBtn"
+          class="timer-btn reset-btn"
+          type="button"
+        >
+          ↻ Reset
+        </button>
+
+      </div>
+
+
+
+      <!-- ======================================
+           EXTRA CONTROLS
+      ======================================= -->
+
+      <div class="timer-extra-controls">
+
+
+        <button
+          id="addOneBtn"
+          class="extra-time-btn"
+          type="button"
+        >
+          +1 min
+        </button>
+
+
+        <button
+          id="addFiveBtn"
+          class="extra-time-btn"
+          type="button"
+        >
+          +5 min
+        </button>
+
+
+        <button
+          id="soundToggle"
+          class="sound-toggle-btn"
+          type="button"
+        >
+          🔊 Sound ON
+        </button>
+
+      </div>
+
+
+
+      <!-- ======================================
+           QUICK PRESETS
+      ======================================= -->
+
+      <div class="preset-section">
+
+        <h3>
+          Quick Timer
+        </h3>
+
+
+        <div class="preset-grid">
+
+
+          <button
+            class="preset-btn"
+            data-minutes="1"
+          >
+            ⚡ 1 Min
+          </button>
+
+
+          <button
+            class="preset-btn"
+            data-minutes="5"
+          >
+            ☕ 5 Min
+          </button>
+
+
+          <button
+            class="preset-btn"
+            data-minutes="10"
+          >
+            🎯 10 Min
+          </button>
+
+
+          <button
+            class="preset-btn"
+            data-minutes="15"
+          >
+            🧘 15 Min
+          </button>
+
+
+          <button
+            class="preset-btn"
+            data-minutes="25"
+          >
+            🍅 25 Min
+          </button>
+
+
+          <button
+            class="preset-btn"
+            data-minutes="30"
+          >
+            🏋️ 30 Min
+          </button>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ======================================
+           SHORTCUTS
+      ======================================= -->
+
+      <div class="timer-shortcuts">
+
+        <span>
+          ⌨️ Space = Start / Pause
+        </span>
+
+        <span>
+          R = Reset
+        </span>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ======================================
+         TIME'S UP OVERLAY
+    ======================================= -->
+
+    <section
+      id="timeUpMessage"
+      class="time-up-message"
+    >
+
+      <div class="time-up-icon">
+        🔔
+      </div>
+
+
+      <h2>
+        Time's Up!
+      </h2>
+
+
+      <p>
+        Your countdown has finished.
+      </p>
+
+
+      <button
+        id="restartBtn"
+        class="restart-btn"
+        type="button"
+      >
+        ↻ Restart
+      </button>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- Bootstrap JS -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+
+  <!-- Timer JS -->
+
+  <script src="timer.js"></script>
+
+</body>
+
+</html>

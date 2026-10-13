@@ -1,0 +1,1824 @@
+/* ================================
+   GLOBAL STYLING
+================================ */
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #212529;
+}
+
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.container {
+  max-width: 1100px;
+}
+
+
+/* ================================
+   SEARCH SECTION
+================================ */
+
+#searchForm {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+#cityInput {
+  border-radius: 10px;
+  padding: 12px;
+}
+
+#searchForm button {
+  border-radius: 10px;
+  padding: 10px 22px;
+}
+
+
+/* ================================
+   LOCATION
+================================ */
+
+#cityName {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+#countryName {
+  font-size: 1rem;
+}
+
+
+/* ================================
+   MAIN WEATHER CARD
+================================ */
+
+.row.justify-content-center.mb-4 .card {
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #ffffff, #eef5ff);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.daily-weather-card {
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+.daily-weather-card:hover {
+  transform:
+    translateY(-8px)
+    rotateX(2deg)
+    rotateY(-2deg)
+    scale(1.015);
+
+  box-shadow:
+    0 18px 35px rgba(0, 0, 0, 0.15);
+}
+
+#weatherIcon {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+#temperature {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+#weatherCondition {
+  font-weight: 600;
+}
+
+#feelsLike {
+  font-weight: 600;
+}
+
+
+/* ================================
+   SECTION HEADINGS
+================================ */
+
+h3 {
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+
+/* ================================
+   GENERAL WEATHER CARDS
+================================ */
+
+.card {
+  border: none;
+  border-radius: 18px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+} */
+ .card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+  transform-style: preserve-3d;
+}
+
+
+.card:hover {
+  transform:
+    translateY(-6px)
+    rotateX(2deg)
+    rotateY(-2deg)
+    scale(1.01);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card h5 {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.card h4 {
+  font-weight: 700;
+}
+
+
+/* ================================
+   WEATHER DETAIL CARDS
+================================ */
+
+#humidity,
+#dewPoint,
+#cloudCover,
+#pressure,
+#surfacePressure,
+#visibility,
+#windSpeed,
+#windDirection,
+#windGust,
+#precipitation,
+#rain,
+#showers,
+#snowfall,
+#rainProbability,
+#sunrise,
+#sunset,
+#daylight,
+#sunshine,
+#uvIndex {
+  margin-top: 8px;
+}
+
+
+/* ================================
+   HOURLY FORECAST
+================================ */
+
+#hourlyForecast {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+#hourlyForecast .card {
+  min-width: 150px;
+  flex: 0 0 auto;
+}
+
+
+/* =================================
+   7 DAY FORECAST
+================================= */
+
+#dailyForecast {
+  align-items: stretch;
+}
+
+
+/* Main Card */
+
+.daily-weather-card {
+  height: 100%;
+  min-height: 360px;
+
+  padding: 22px 16px;
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Hover */
+
+.daily-weather-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.13);
+}
+
+
+/* Date */
+
+.daily-date {
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  color: #334155;
+
+  margin-bottom: 18px;
+}
+
+
+/* Weather Icon */
+
+.daily-icon {
+  font-size: 3.1rem;
+
+  line-height: 1;
+
+  margin-bottom: 14px;
+}
+
+
+/* Weather Condition */
+
+.daily-condition {
+  font-size: 0.95rem;
+
+  font-weight: 600;
+
+  color: #64748b;
+
+  min-height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 10px;
+}
+
+
+/* Temperature */
+
+.daily-temperature {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  margin-bottom: 8px;
+}
+
+
+.temp-high {
+  font-size: 1.75rem;
+
+  font-weight: 800;
+
+  color: #0f172a;
+}
+
+
+.temp-divider {
+  font-size: 1.35rem;
+
+  color: #94a3b8;
+}
+
+
+.temp-low {
+  font-size: 1.45rem;
+
+  font-weight: 600;
+
+  color: #64748b;
+}
+
+
+/* Feels Like */
+
+.daily-feels {
+  font-size: 0.85rem;
+
+  color: #64748b;
+
+  margin-bottom: 20px;
+}
+
+
+/* Bottom Information */
+
+.daily-details {
+  width: 100%;
+
+  margin-top: auto;
+
+  padding-top: 14px;
+
+  border-top: 1px solid #e2e8f0;
+
+  display: flex;
+
+  justify-content: space-around;
+
+  gap: 8px;
+}
+
+
+.daily-details div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
+  color: #475569;
+}
+
+.forecast-heading h3 {
+  margin-bottom: 5px;
+}
+
+.forecast-heading p {
+  color: #64748b;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+body.dark-mode .forecast-heading p {
+  color: #94a3b8;
+}
+
+
+/* ================================
+   CUSTOM PLACE + RECOMMENDATION CARD
+================================ */
+
+.place-recommendation-card {
+  border-radius: 24px;
+  padding: 25px;
+  background: linear-gradient(135deg, #fff8e7, #ffffff);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.place-recommendation-card .place-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.place-recommendation-card .popular-place {
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.place-recommendation-card .recommendation {
+  margin-top: 18px;
+  padding: 15px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.place-recommendation-card .recommendation-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+
+/* =================================
+   WEATHER THEMES - LIGHT MODE
+================================= */
+
+body.weather-clear:not(.dark-mode) {
+  background:
+    linear-gradient(
+      135deg,
+      #fff4c2,
+      #e8f7ff
+    );
+}
+
+
+body.weather-cloudy:not(.dark-mode) {
+  background:
+    linear-gradient(
+      135deg,
+      #dfe7ef,
+      #f8fafc
+    );
+}
+
+
+body.weather-rain:not(.dark-mode) {
+  background:
+    linear-gradient(
+      135deg,
+      #b8cbe0,
+      #e8eef5
+    );
+}
+
+
+body.weather-cold:not(.dark-mode) {
+  background:
+    linear-gradient(
+      135deg,
+      #dff5ff,
+      #eef8ff
+    );
+}
+
+
+/* =================================
+   WEATHER THEMES - DARK MODE
+================================= */
+
+body.dark-mode.weather-clear {
+  background:
+    linear-gradient(
+      135deg,
+      #172554,
+      #0f172a
+    );
+}
+
+
+body.dark-mode.weather-cloudy {
+  background:
+    linear-gradient(
+      135deg,
+      #1e293b,
+      #0f172a
+    );
+}
+
+
+body.dark-mode.weather-rain {
+  background:
+    linear-gradient(
+      135deg,
+      #172554,
+      #0f172a
+    );
+}
+
+
+body.dark-mode.weather-cold {
+  background:
+    linear-gradient(
+      135deg,
+      #164e63,
+      #0f172a
+    );
+}
+
+/* ================================
+   LOADING MESSAGE
+================================ */
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 20px;
+}
+
+
+/* ================================
+   ERROR MESSAGE
+================================ */
+
+.error-message {
+  text-align: center;
+  color: #dc3545;
+  font-weight: 600;
+  padding: 20px;
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 768px) {
+
+  #temperature {
+    font-size: 3rem;
+  }
+
+  #weatherIcon {
+    font-size: 3rem;
+  }
+
+  #cityName {
+    font-size: 1.7rem;
+  }
+
+  #searchForm {
+    padding: 10px;
+  }
+
+  #searchForm button {
+    padding: 10px 16px;
+  }
+
+}
+
+
+@media (max-width: 576px) {
+
+  #searchForm {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #cityInput {
+    margin-right: 0 !important;
+  }
+
+  #searchForm button {
+    width: 100%;
+  }
+
+  .card-body {
+    padding: 16px;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+}
+
+/* =================================
+   DARK MODE
+================================= */
+
+body.dark-mode {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+
+/* Navbar */
+
+body.dark-mode .navbar {
+  background: #111827 !important;
+}
+
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link {
+  color: #e2e8f0 !important;
+}
+
+
+/* Search */
+
+body.dark-mode #searchForm {
+  background: #1e293b;
+}
+
+
+/* Cards */
+
+body.dark-mode .card {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+
+/* Main Weather Card */
+
+body.dark-mode .row.justify-content-center.mb-4 .card {
+  background: linear-gradient(
+    135deg,
+    #1e293b,
+    #172554
+  );
+}
+
+
+/* Text */
+
+body.dark-mode .text-muted {
+  color: #94a3b8 !important;
+}
+
+
+/* Recommendation Card */
+
+body.dark-mode .place-recommendation-card {
+  background: linear-gradient(
+    135deg,
+    #312e81,
+    #1e293b
+  );
+
+  color: #e2e8f0;
+}
+
+
+body.dark-mode
+.place-recommendation-card
+.recommendation {
+
+  background: rgba(255, 255, 255, 0.08);
+
+}
+
+
+/* Theme button */
+
+body.dark-mode #themeToggle {
+  color: #f8fafc;
+  border-color: #64748b;
+}
+
+
+/* Forecast horizontal scrollbar */
+
+body.dark-mode #hourlyForecast {
+  scrollbar-color: #64748b transparent;
+}
+/* =================================
+   7 DAY FORECAST - DARK MODE
+================================= */
+
+body.dark-mode .daily-weather-card {
+  background: #1e293b;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+body.dark-mode .daily-date {
+  color: #e2e8f0;
+}
+
+
+body.dark-mode .daily-condition {
+  color: #94a3b8;
+}
+
+
+body.dark-mode .temp-high {
+  color: #f8fafc;
+}
+
+
+body.dark-mode .temp-divider {
+  color: #64748b;
+}
+
+
+body.dark-mode .temp-low {
+  color: #cbd5e1;
+}
+
+
+body.dark-mode .daily-feels {
+  color: #94a3b8;
+}
+
+
+body.dark-mode .daily-details {
+  border-top-color: #334155;
+}
+
+
+body.dark-mode .daily-details div {
+  color: #cbd5e1;
+}
+
+/* =================================
+   CLICKABLE DAILY FORECAST
+================================= */
+
+.daily-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+
+.daily-card-link:hover {
+  color: inherit;
+}
+
+
+.daily-weather-card {
+  cursor: pointer;
+  position: relative;
+}
+
+
+.view-day {
+  margin-top: 15px;
+
+  font-size: 0.78rem;
+
+  font-weight: 600;
+
+  color: #3b82f6;
+
+  opacity: 0;
+
+  transform: translateY(5px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.daily-weather-card:hover .view-day {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =================================
+   DAILY FORECAST PAGE
+================================= */
+
+.selected-date {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #3b82f6;
+  margin-bottom: 8px;
+}
+
+
+.selected-day-card {
+  padding: 30px;
+
+  border-radius: 28px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.10);
+}
+
+
+.selected-weather-icon {
+  font-size: 5rem;
+  margin-bottom: 15px;
+}
+
+
+.selected-condition {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+
+.selected-temperature {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+
+.selected-min {
+  color: #64748b;
+}
+
+
+.selected-feels {
+  margin-top: 8px;
+  color: #64748b;
+}
+
+
+/* Details */
+
+.section-title {
+  margin-bottom: 20px;
+}
+
+
+.detail-page-card {
+  min-height: 130px;
+
+  padding: 22px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.07);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+
+.detail-page-card span {
+  font-size: 1.7rem;
+  margin-bottom: 8px;
+}
+
+
+.detail-page-card strong {
+  font-size: 1.1rem;
+}
+
+
+.detail-page-card small {
+  color: #64748b;
+  margin-top: 5px;
+}
+
+
+/* Hourly heading */
+
+.hourly-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.hourly-heading h3 {
+  margin-bottom: 5px;
+}
+
+
+.hourly-heading p {
+  color: #64748b;
+}
+
+
+/* Hourly container */
+
+.selected-hourly-container {
+  display: flex;
+
+  gap: 15px;
+
+  overflow-x: auto;
+
+  padding: 5px 5px 20px;
+}
+
+
+/* Hour Card */
+
+.selected-hour-card {
+  min-width: 155px;
+
+  padding: 20px 15px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.07);
+
+  text-align: center;
+
+  flex-shrink: 0;
+}
+
+
+.hour-time {
+  font-weight: 700;
+
+  color: #475569;
+
+  margin-bottom: 12px;
+}
+
+
+.hour-icon {
+  font-size: 2.5rem;
+
+  margin-bottom: 10px;
+}
+
+
+.hour-temperature {
+  font-size: 1.6rem;
+
+  font-weight: 800;
+
+  margin-bottom: 5px;
+}
+
+
+.hour-condition {
+  font-size: 0.85rem;
+
+  color: #64748b;
+
+  margin-bottom: 15px;
+}
+
+
+.hour-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
+  font-size: 0.78rem;
+
+  color: #475569;
+}
+
+/* =================================
+   FORECAST PAGE - DARK MODE
+================================= */
+
+html.dark-page,
+html.dark-page body {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+
+/* Navbar */
+
+html.dark-page .navbar {
+  background: #111827 !important;
+}
+
+html.dark-page .navbar-brand,
+html.dark-page .nav-link {
+  color: #e2e8f0 !important;
+}
+
+
+/* Back Button */
+
+html.dark-page .btn-outline-primary {
+  color: #60a5fa;
+  border-color: #60a5fa;
+}
+
+
+/* Selected Day Main Card */
+
+html.dark-page .selected-day-card {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+
+/* Weather Condition */
+
+html.dark-page .selected-condition {
+  color: #94a3b8;
+}
+
+
+/* Feels Like */
+
+html.dark-page .selected-feels {
+  color: #94a3b8;
+}
+
+
+/* Temperature */
+
+html.dark-page .selected-temperature {
+  color: #f8fafc;
+}
+
+
+/* Minimum Temperature */
+
+html.dark-page .selected-min {
+  color: #94a3b8;
+}
+
+
+/* Weather Detail Cards */
+
+html.dark-page .detail-page-card {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+
+/* Detail Card Small Text */
+
+html.dark-page .detail-page-card small {
+  color: #94a3b8;
+}
+
+
+/* Hourly Forecast Cards */
+
+html.dark-page .selected-hour-card {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+
+/* Hourly Text */
+
+html.dark-page .hour-time,
+html.dark-page .hour-condition,
+html.dark-page .hour-info {
+  color: #94a3b8;
+}
+
+
+/* Headings / muted text */
+
+html.dark-page .text-muted {
+  color: #94a3b8 !important;
+}
+
+
+html.dark-page .hourly-heading p {
+  color: #94a3b8;
+}
+
+
+/* Selected Date */
+
+html.dark-page .selected-date {
+  color: #60a5fa;
+}
+
+/* =========================================
+   SCROLL REVEAL ANIMATION
+========================================= */
+
+.scroll-reveal {
+  opacity: 0;
+
+  transform: translateY(70px) scale(0.96);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+
+/* Jab card viewport ke andar aaye */
+
+.scroll-reveal.show {
+  opacity: 1;
+
+  transform: translateY(0) scale(1);
+}
+
+
+/* Optional: thoda smoother feel */
+
+.scroll-reveal {
+  will-change: opacity, transform;
+}
+
+/* =========================================
+   ABOUT APP PAGE
+========================================= */
+
+
+/* Main Page */
+
+.about-page {
+  max-width: 1150px;
+  margin: auto;
+  padding: 70px 20px 30px;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.about-hero {
+  text-align: center;
+
+  max-width: 800px;
+
+  margin: 0 auto 70px;
+
+  animation:
+    aboutHeroEntry 0.8s ease-out;
+}
+
+
+@keyframes aboutHeroEntry {
+
+  from {
+    opacity: 0;
+    transform:
+      translateY(40px)
+      scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+.about-badge {
+  display: inline-block;
+
+  padding: 8px 18px;
+
+  border-radius: 50px;
+
+  background:
+    rgba(59, 130, 246, 0.12);
+
+  color: #3b82f6;
+
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+
+.about-hero h1 {
+  font-size: 4rem;
+
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  margin-bottom: 22px;
+}
+
+
+.about-hero h1 span {
+  background:
+    linear-gradient(
+      90deg,
+      #3b82f6,
+      #8b5cf6
+    );
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+.about-hero p {
+  max-width: 650px;
+
+  margin: auto;
+
+  font-size: 1.15rem;
+
+  color: #64748b;
+
+  line-height: 1.8;
+}
+
+
+.about-back-btn {
+  display: inline-block;
+
+  margin-top: 30px;
+
+  padding: 12px 24px;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      #3b82f6,
+      #6366f1
+    );
+
+  color: white;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.about-back-btn:hover {
+  color: white;
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 12px 25px
+    rgba(59, 130, 246, 0.25);
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.about-features {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 20px;
+
+  margin-bottom: 70px;
+}
+
+
+.about-feature-card {
+  padding: 28px 22px;
+
+  border-radius: 22px;
+
+  background:
+    rgba(255, 255, 255, 0.9);
+
+  border:
+    1px solid
+    rgba(0, 0, 0, 0.05);
+
+  box-shadow:
+    0 10px 30px
+    rgba(0, 0, 0, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  animation:
+    featureEntry 0.7s ease-out both;
+}
+
+
+@keyframes featureEntry {
+
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+.about-feature-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+
+.about-feature-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+
+.about-feature-card:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+
+.about-feature-card:hover {
+  transform:
+    translateY(-8px)
+    rotateX(2deg)
+    rotateY(-2deg);
+
+  box-shadow:
+    0 18px 35px
+    rgba(0, 0, 0, 0.12);
+}
+
+
+.feature-icon {
+  font-size: 2.5rem;
+
+  margin-bottom: 18px;
+}
+
+
+.about-feature-card h3 {
+  font-size: 1.25rem;
+
+  margin-bottom: 10px;
+}
+
+
+.about-feature-card p {
+  color: #64748b;
+
+  line-height: 1.7;
+
+  font-size: 0.92rem;
+}
+
+
+/* =========================================
+   SMART SECTION
+========================================= */
+
+.about-smart-section {
+  padding: 50px;
+
+  border-radius: 30px;
+
+  margin-bottom: 70px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #312e81,
+      #1e3a8a
+    );
+
+  color: white;
+
+  overflow: hidden;
+
+  position: relative;
+
+  animation:
+    aboutHeroEntry 0.9s ease-out;
+}
+
+
+.about-smart-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+
+  height: 250px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  top: -100px;
+
+  right: -70px;
+
+  animation:
+    floatingBubble 6s ease-in-out infinite;
+}
+
+
+@keyframes floatingBubble {
+
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(25px);
+  }
+
+}
+
+
+.smart-content {
+  position: relative;
+
+  z-index: 1;
+
+  max-width: 800px;
+}
+
+
+.smart-label {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+.smart-content h2 {
+  font-size: 2.5rem;
+
+  font-weight: 800;
+
+  margin-bottom: 15px;
+}
+
+
+.smart-content h2 span {
+  color: #93c5fd;
+}
+
+
+.smart-content > p {
+  line-height: 1.8;
+
+  opacity: 0.9;
+
+  max-width: 650px;
+}
+
+
+.smart-example {
+  margin-top: 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+.smart-example-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 13px 16px;
+
+  border-radius: 14px;
+
+  background:
+    rgba(255, 255, 255, 0.09);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.smart-example-item:hover {
+  transform:
+    translateX(8px);
+
+  background:
+    rgba(255, 255, 255, 0.14);
+}
+
+
+/* =========================================
+   TECHNOLOGY
+========================================= */
+
+.about-tech {
+  text-align: center;
+
+  margin-bottom: 60px;
+}
+
+
+.about-tech h2 {
+  font-weight: 800;
+
+  margin-bottom: 25px;
+}
+
+
+.tech-list {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+
+.tech-list span {
+  padding: 10px 17px;
+
+  border-radius: 50px;
+
+  background:
+    rgba(59, 130, 246, 0.10);
+
+  color: #3b82f6;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.tech-list span:hover {
+  transform:
+    translateY(-4px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.about-footer {
+  text-align: center;
+
+  padding: 30px 10px;
+
+  color: #64748b;
+}
+
+
+/* =========================================
+   ABOUT PAGE - DARK MODE
+========================================= */
+
+html.dark-page .about-feature-card,
+body.dark-mode .about-feature-card {
+  background: #1e293b;
+
+  color: #e2e8f0;
+
+  border-color: #334155;
+}
+
+
+html.dark-page .about-feature-card p,
+body.dark-mode .about-feature-card p {
+  color: #94a3b8;
+}
+
+
+html.dark-page .about-hero p,
+body.dark-mode .about-hero p {
+  color: #94a3b8;
+}
+
+
+html.dark-page .about-footer,
+body.dark-mode .about-footer {
+  color: #94a3b8;
+}
+
+
+html.dark-page .about-badge,
+body.dark-mode .about-badge {
+  background:
+    rgba(96, 165, 250, 0.12);
+
+  color: #60a5fa;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 992px) {
+
+  .about-features {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .about-hero h1 {
+    font-size: 3.2rem;
+  }
+
+}
+
+
+@media (max-width: 576px) {
+
+  .about-page {
+    padding-top: 45px;
+  }
+
+
+  .about-hero h1 {
+    font-size: 2.4rem;
+  }
+
+
+  .about-hero p {
+    font-size: 1rem;
+  }
+
+
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+
+
+  .about-smart-section {
+    padding: 30px 22px;
+  }
+
+
+  .smart-content h2 {
+    font-size: 2rem;
+  }
+
+}
+
+/* =================================
+   NAVBAR DROPDOWN STYLING
+================================= */
+
+.navbar .dropdown-menu {
+  min-width: 200px;
+
+  margin-top: 10px;
+
+  padding: 8px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.15);
+
+  animation:
+    dropdownOpen 0.2s ease-out;
+}
+
+
+/* Dropdown opening animation */
+
+@keyframes dropdownOpen {
+
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* Dropdown items */
+
+.navbar .dropdown-item {
+  padding: 11px 13px;
+
+  border-radius: 9px;
+
+  font-weight: 500;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* Hover */
+
+.navbar .dropdown-item:hover {
+  background-color: #eef4ff;
+
+  transform: translateX(4px);
+}
+
+
+/* Active / focus */
+
+.navbar .dropdown-item:focus {
+  background-color: #eef4ff;
+}
+
+
+/* Divider */
+
+.navbar .dropdown-divider {
+  margin: 5px 4px;
+
+  border-color: #e5e7eb;
+}
+
+
+/* Dropdown arrow */
+
+.navbar .dropdown-toggle::after {
+  transition: transform 0.2s ease;
+}
+
+
+/* Rotate arrow when dropdown is open */
+
+.navbar .show > .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+
+/* =================================
+   DARK MODE DROPDOWN
+================================= */
+
+body.dark-mode .navbar .dropdown-menu {
+  background: #1e293b;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+body.dark-mode .navbar .dropdown-item {
+  color: #e2e8f0;
+}
+
+
+body.dark-mode .navbar .dropdown-item:hover,
+body.dark-mode .navbar .dropdown-item:focus {
+  background-color: #334155;
+
+  color: #f8fafc;
+}
+
+
+body.dark-mode .navbar .dropdown-divider {
+  border-color: #334155;
+}

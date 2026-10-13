@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>DayOrbit : StopWatch</title>
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Main CSS -->
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+  <link
+  rel="stylesheet"
+  href="stopwatch.css"
+>
+
+  <!-- Apply saved theme before page loads -->
+  <script>
+    if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.classList.add("dark-page");
+    }
+  </script>
+<link rel="stylesheet" href="branding.css">
+</head>
+
+
+<body>
+
+
+  <!-- ======================================
+       NAVBAR
+  ======================================= -->
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+    <div class="container-fluid">
+
+      
+<a class="navbar-brand dayorbit-brand"
+   href="index.html"
+   aria-label="DayOrbit home">
+
+    <img
+        src="assets/dayorbit-icon.png"
+        alt=""
+        class="dayorbit-mark"
+    >
+
+    <span class="dayorbit-name"><span class="day-word">Day</span><span class="orbit-word">Orbit</span></span>
+</a>
+
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarContent"
+      >
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+
+      <div
+        class="collapse navbar-collapse"
+        id="navbarContent"
+      >
+<ul class="navbar-nav me-auto">
+
+    <!-- Home -->
+    <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+    </li>
+
+    <!-- Tools Dropdown -->
+    <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="toolsDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+        >
+            Tools
+        </a>
+
+        <ul class="dropdown-menu" aria-labelledby="toolsDropdown">
+          <li>
+            <a class="dropdown-item" href="weather.html">
+                🌤️ Weather
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="alarm.html">
+              ⏰ Alarm
+            </a>
+        </li>
+            <li>
+                <a class="dropdown-item" href="stopwatch.html">
+                    ⏱️ Stopwatch
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="timer.html">
+                    ⏳ Timer
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="calendar.html">
+                    📅 Calendar
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    <!-- Explore Dropdown -->
+    <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="exploreDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+        >
+            Explore
+        </a>
+
+        <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+            <li>
+                <a class="dropdown-item" href="about.html">
+                    ✨ About App
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="about-developer.html">
+                    👨‍💻 About Developer
+                </a>
+            </li>
+        </ul>
+    </li>
+
+</ul>
+
+          </li>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+  <!-- ======================================
+       STOPWATCH PAGE
+  ======================================= -->
+
+  <main class="stopwatch-page">
+
+
+    <!-- Heading -->
+
+    <section class="stopwatch-heading">
+
+      <div class="stopwatch-badge">
+        ⏱️ Precision Timer
+      </div>
+
+
+      <h1>
+        Stopwatch
+      </h1>
+
+
+      <p>
+        Track time with precision, laps and sound feedback.
+      </p>
+
+    </section>
+
+
+
+    <!-- Status -->
+
+    <div
+      id="stopwatchStatus"
+      class="stopwatch-status"
+    >
+      ● Ready
+    </div>
+
+
+
+    <!-- Main Stopwatch -->
+
+    <section class="stopwatch-main-card">
+
+
+      <!-- Animated Ring -->
+
+      <div
+        id="timerRing"
+        class="timer-ring"
+      >
+
+        <div class="timer-display">
+
+          <span id="hours">
+            00
+          </span>
+
+          <span class="time-separator">
+            :
+          </span>
+
+          <span id="minutes">
+            00
+          </span>
+
+          <span class="time-separator">
+            :
+          </span>
+
+          <span id="seconds">
+            00
+          </span>
+
+          <span class="time-separator">
+            :
+          </span>
+
+          <span
+            id="milliseconds"
+            class="milliseconds"
+          >
+            00
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Controls -->
+
+      <div class="stopwatch-controls">
+
+
+        <button
+          id="startPauseBtn"
+          class="stopwatch-btn primary-btn"
+        >
+          ▶ Start
+        </button>
+
+
+        <button
+          id="lapBtn"
+          class="stopwatch-btn secondary-btn"
+          disabled
+        >
+          🏁 Lap
+        </button>
+
+
+        <button
+          id="resetBtn"
+          class="stopwatch-btn danger-btn"
+        >
+          ↻ Reset
+        </button>
+
+
+      </div>
+
+
+
+      <!-- Sound -->
+
+      <button
+        id="soundToggle"
+        class="sound-btn"
+      >
+        🔊 Sound ON
+      </button>
+
+
+      <!-- Shortcut -->
+
+      <div class="shortcut-info">
+
+        <span>
+          ⌨️ Space = Start/Pause
+        </span>
+
+        <span>
+          L = Lap
+        </span>
+
+        <span>
+          R = Reset
+        </span>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ======================================
+         LAP HISTORY
+    ======================================= -->
+
+    <section class="lap-section">
+
+
+      <div class="lap-header">
+
+        <div>
+
+          <h2>
+            🏁 Lap History
+          </h2>
+
+          <p>
+            Your recorded lap times
+          </p>
+
+        </div>
+
+
+        <span id="lapCount">
+          0 Laps
+        </span>
+
+      </div>
+
+
+
+      <div class="lap-table-wrapper">
+
+        <table class="lap-table">
+
+          <thead>
+
+            <tr>
+
+              <th>
+                #
+              </th>
+
+              <th>
+                Lap Time
+              </th>
+
+              <th>
+                Difference
+              </th>
+
+            </tr>
+
+          </thead>
+
+
+          <tbody id="lapTableBody">
+
+            <tr id="emptyLap">
+
+              <td colspan="3">
+                No laps recorded yet
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- Bootstrap JS -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+
+  <!-- Stopwatch JS -->
+
+  <script src="stopwatch.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+/* DayOrbit branding */
+
+.dayorbit-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.dayorbit-mark {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.dayorbit-name {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.day-word {
+  color: #111827;
+}
+
+.orbit-word {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+body.dark-mode .day-word,
+html.dark-page .day-word {
+  color: #f8fafc;
+}
+
+
+/* DayOrbit navbar dropdown styling */
+
+.navbar .dropdown-menu {
+    min-width: 205px;
+    padding: 8px;
+    border: 1px solid rgba(100, 116, 139, 0.22);
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+    z-index: 1050;
+}
+
+.navbar .dropdown-item {
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: #1f2937;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+    background-color: #eaf0ff;
+    color: #1d4ed8;
+}
+
+/* Dark mode dropdown */
+html.dark-page .navbar .dropdown-menu,
+body.dark-mode .navbar .dropdown-menu {
+    background-color: #111827;
+    border-color: #334155;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+html.dark-page .navbar .dropdown-item,
+body.dark-mode .navbar .dropdown-item {
+    color: #e5e7eb;
+}
+
+html.dark-page .navbar .dropdown-item:hover,
+html.dark-page .navbar .dropdown-item:focus,
+body.dark-mode .navbar .dropdown-item:hover,
+body.dark-mode .navbar .dropdown-item:focus {
+    background-color: #263449;
+    color: #ffffff;
+}
+
+html.dark-page .navbar .dropdown-divider,
+body.dark-mode .navbar .dropdown-divider {
+    border-color: #334155;
+}

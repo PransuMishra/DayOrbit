@@ -1,0 +1,2330 @@
+/* =========================================
+   DEVELOPER PAGE
+========================================= */
+
+.developer-page {
+
+  max-width: 1150px;
+
+  margin: auto;
+
+  padding:
+    70px 20px 80px;
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.developer-hero {
+
+  text-align: center;
+
+  max-width: 900px;
+
+  margin:
+    0 auto 70px;
+
+  animation:
+    developerHero 0.8s ease-out;
+
+}
+
+
+@keyframes developerHero {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(35px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+
+.developer-avatar {
+
+  width:
+    110px;
+
+  height:
+    110px;
+
+  margin:
+    0 auto 20px;
+
+  border-radius:
+    50%;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  font-size:
+    3.5rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      #3b82f6,
+      #8b5cf6
+    );
+
+  box-shadow:
+    0 0 45px
+    rgba(
+      99,
+      102,
+      241,
+      0.25
+    );
+
+  animation:
+    avatarFloat 4s ease-in-out infinite;
+
+}
+
+
+@keyframes avatarFloat {
+
+  0%,
+  100% {
+
+    transform:
+      translateY(0);
+
+  }
+
+  50% {
+
+    transform:
+      translateY(-8px);
+
+  }
+
+}
+
+
+.developer-badge {
+
+  display:
+    inline-block;
+
+  padding:
+    8px 18px;
+
+  border-radius:
+    50px;
+
+  background:
+    rgba(
+      59,
+      130,
+      246,
+      0.10
+    );
+
+  color:
+    #2563eb;
+
+  font-weight:
+    700;
+
+  font-size:
+    0.85rem;
+
+  margin-bottom:
+    15px;
+
+}
+
+
+.developer-hero h1 {
+
+  font-size:
+    4rem;
+
+  font-weight:
+    850;
+
+  margin-bottom:
+    8px;
+
+}
+
+
+.developer-hero h1 span {
+
+  background:
+    linear-gradient(
+      90deg,
+      #3b82f6,
+      #8b5cf6
+    );
+
+  -webkit-background-clip:
+    text;
+
+  -webkit-text-fill-color:
+    transparent;
+
+}
+
+
+.developer-hero h2 {
+
+  font-size:
+    1.45rem;
+
+  color:
+    #64748b;
+
+  font-weight:
+    600;
+
+}
+
+
+.developer-intro {
+
+  max-width:
+    760px;
+
+  margin:
+    22px auto 0;
+
+  font-size:
+    1.05rem;
+
+  line-height:
+    1.85;
+
+  color:
+    #64748b;
+
+}
+
+
+/* =========================================
+   SOCIALS
+========================================= */
+
+.developer-socials {
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    10px;
+
+  margin-top:
+    25px;
+
+}
+
+
+.social-btn {
+
+  text-decoration:
+    none;
+
+  padding:
+    9px 15px;
+
+  border-radius:
+    10px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.8
+    );
+
+  border:
+    1px solid
+    #e2e8f0;
+
+  color:
+    #334155;
+
+  font-weight:
+    600;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+}
+
+
+.social-btn:hover {
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 9px 20px
+    rgba(
+      0,
+      0,
+      0,
+      0.08
+    );
+
+  color:
+    #2563eb;
+
+}
+
+
+/* =========================================
+   RESUME BUTTON
+========================================= */
+
+.resume-btn {
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+
+  margin-top:
+    25px;
+
+  padding:
+    14px 23px;
+
+  border-radius:
+    13px;
+
+  color:
+    white;
+
+  text-decoration:
+    none;
+
+  font-weight:
+    800;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #7c3aed
+    );
+
+  box-shadow:
+    0 10px 25px
+    rgba(
+      59,
+      130,
+      246,
+      0.22
+    );
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+}
+
+
+.resume-btn:hover {
+
+  color:
+    white;
+
+  transform:
+    translateY(-5px);
+
+  box-shadow:
+    0 17px 35px
+    rgba(
+      59,
+      130,
+      246,
+      0.28
+    );
+
+}
+
+
+.resume-btn span {
+
+  font-size:
+    1.2rem;
+
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.developer-stats {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap:
+    15px;
+
+  margin-bottom:
+    80px;
+
+}
+
+
+.developer-stat-card {
+
+  padding:
+    23px;
+
+  border-radius:
+    20px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.88
+    );
+
+  border:
+    1px solid
+    rgba(
+      0,
+      0,
+      0,
+      0.05
+    );
+
+  box-shadow:
+    0 10px 28px
+    rgba(
+      0,
+      0,
+      0,
+      0.06
+    );
+
+  text-align:
+    center;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+}
+
+
+.developer-stat-card:hover {
+
+  transform:
+    translateY(-7px);
+
+  box-shadow:
+    0 16px 30px
+    rgba(
+      0,
+      0,
+      0,
+      0.10
+    );
+
+}
+
+
+.stat-icon {
+
+  display:
+    block;
+
+  font-size:
+    1.8rem;
+
+  margin-bottom:
+    8px;
+
+}
+
+
+.developer-stat-card strong {
+
+  display:
+    block;
+
+  font-size:
+    1.65rem;
+
+  font-weight:
+    800;
+
+}
+
+
+.developer-stat-card small {
+
+  color:
+    #64748b;
+
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.developer-section {
+
+  margin-bottom:
+    80px;
+
+}
+
+
+.section-heading {
+
+  display:
+    flex;
+
+  align-items:
+    flex-start;
+
+  gap:
+    15px;
+
+  margin-bottom:
+    28px;
+
+}
+
+
+.section-heading > span {
+
+  font-size:
+    0.78rem;
+
+  font-weight:
+    800;
+
+  color:
+    #3b82f6;
+
+  padding-top:
+    7px;
+
+}
+
+
+.section-heading h2 {
+
+  margin:
+    0;
+
+  font-size:
+    2rem;
+
+  font-weight:
+    800;
+
+}
+
+
+.section-heading p {
+
+  margin:
+    4px 0 0;
+
+  color:
+    #64748b;
+
+}
+
+
+/* =========================================
+   ABOUT ME
+========================================= */
+
+.about-me-card {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr 300px;
+
+  gap:
+    25px;
+
+  padding:
+    32px;
+
+  border-radius:
+    25px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef5ff,
+      #f8f5ff
+    );
+
+  box-shadow:
+    0 14px 35px
+    rgba(
+      0,
+      0,
+      0,
+      0.06
+    );
+
+}
+
+
+.about-me-main h3 {
+
+  font-size:
+    1.55rem;
+
+  font-weight:
+    800;
+
+  margin-bottom:
+    15px;
+
+}
+
+
+.about-me-main p {
+
+  color:
+    #64748b;
+
+  line-height:
+    1.8;
+
+}
+
+
+.about-focus-box {
+
+  padding:
+    22px;
+
+  border-radius:
+    18px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.7
+    );
+
+}
+
+
+.about-focus-box div {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+
+}
+
+
+.about-focus-box span {
+
+  font-size:
+    1.5rem;
+
+}
+
+
+.about-focus-box p {
+
+  color:
+    #64748b;
+
+  line-height:
+    1.7;
+
+  margin-top:
+    10px;
+
+}
+
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skills-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap:
+    16px;
+
+}
+
+
+.skill-group {
+
+  padding:
+    23px;
+
+  border-radius:
+    20px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.88
+    );
+
+  border:
+    1px solid
+    #e5e7eb;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+}
+
+
+.skill-group:hover {
+
+  transform:
+    translateY(-5px);
+
+  box-shadow:
+    0 13px 28px
+    rgba(
+      0,
+      0,
+      0,
+      0.08
+    );
+
+}
+
+
+.skill-group h3 {
+
+  font-size:
+    1rem;
+
+  font-weight:
+    800;
+
+  margin-bottom:
+    15px;
+
+}
+
+
+.skill-tags {
+
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    8px;
+
+}
+
+
+.skill-tags span {
+
+  padding:
+    7px 11px;
+
+  border-radius:
+    9px;
+
+  background:
+    #eff6ff;
+
+  color:
+    #2563eb;
+
+  font-size:
+    0.76rem;
+
+  font-weight:
+    700;
+
+}
+
+
+/* =========================================
+   EXPERIENCE
+========================================= */
+
+.experience-card {
+
+  display:
+    flex;
+
+  gap:
+    20px;
+
+  padding:
+    27px;
+
+  border-radius:
+    23px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.9
+    );
+
+  border:
+    1px solid
+    #e5e7eb;
+
+  box-shadow:
+    0 10px 30px
+    rgba(
+      0,
+      0,
+      0,
+      0.06
+    );
+
+}
+
+
+.experience-icon {
+
+  width:
+    55px;
+
+  height:
+    55px;
+
+  flex-shrink:
+    0;
+
+  border-radius:
+    16px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  background:
+    #fff7ed;
+
+  font-size:
+    1.6rem;
+
+}
+
+
+.experience-top {
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  gap:
+    20px;
+
+}
+
+
+.experience-top h3 {
+
+  margin:
+    0;
+
+  font-size:
+    1.2rem;
+
+  font-weight:
+    800;
+
+}
+
+
+.experience-top p {
+
+  margin:
+    4px 0 0;
+
+  color:
+    #3b82f6;
+
+  font-weight:
+    600;
+
+}
+
+
+.experience-top > span {
+
+  color:
+    #94a3b8;
+
+  white-space:
+    nowrap;
+
+  font-size:
+    0.82rem;
+
+}
+
+
+.experience-points {
+
+  margin-top:
+    17px;
+
+}
+
+
+.experience-points p {
+
+  margin-bottom:
+    9px;
+
+  color:
+    #64748b;
+
+}
+
+
+/* =========================================
+   PROJECTS
+========================================= */
+
+.project-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap:
+    18px;
+
+}
+
+
+.developer-project-card {
+
+  padding:
+    24px;
+
+  border-radius:
+    23px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.9
+    );
+
+  border:
+    1px solid
+    #e5e7eb;
+
+  box-shadow:
+    0 10px 30px
+    rgba(
+      0,
+      0,
+      0,
+      0.06
+    );
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+}
+
+
+.developer-project-card:hover {
+
+  transform:
+    translateY(-9px)
+    rotateX(2deg)
+    rotateY(-2deg);
+
+  box-shadow:
+    0 20px 38px
+    rgba(
+      0,
+      0,
+      0,
+      0.11
+    );
+
+}
+
+
+.project-top {
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    center;
+
+}
+
+
+.project-icon {
+
+  width:
+    48px;
+
+  height:
+    48px;
+
+  border-radius:
+    14px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  background:
+    #eef4ff;
+
+  font-size:
+    1.5rem;
+
+}
+
+
+.project-top > span {
+
+  font-size:
+    0.69rem;
+
+  color:
+    #94a3b8;
+
+}
+
+
+.developer-project-card h3 {
+
+  margin-top:
+    20px;
+
+  margin-bottom:
+    5px;
+
+  font-size:
+    1.3rem;
+
+  font-weight:
+    800;
+
+}
+
+
+.developer-project-card h4 {
+
+  font-size:
+    0.9rem;
+
+  color:
+    #64748b;
+
+  line-height:
+    1.45;
+
+}
+
+
+.developer-project-card > p {
+
+  margin-top:
+    12px;
+
+  color:
+    #64748b;
+
+  line-height:
+    1.65;
+
+  font-size:
+    0.82rem;
+
+}
+
+
+.project-tech {
+
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    6px;
+
+  margin:
+    auto 0 17px;
+
+}
+
+
+.project-tech span {
+
+  padding:
+    5px 8px;
+
+  border-radius:
+    7px;
+
+  background:
+    #f1f5f9;
+
+  color:
+    #475569;
+
+  font-size:
+    0.65rem;
+
+  font-weight:
+    700;
+
+}
+
+
+.github-project-btn {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    8px;
+
+  padding:
+    10px 13px;
+
+  border-radius:
+    10px;
+
+  text-decoration:
+    none;
+
+  background:
+    #0f172a;
+
+  color:
+    white;
+
+  font-size:
+    0.78rem;
+
+  font-weight:
+    700;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+
+}
+
+
+.github-project-btn:hover {
+
+  transform:
+    translateY(-3px);
+
+  background:
+    #2563eb;
+
+  color:
+    white;
+
+}
+
+
+/* =========================================
+   CODING JOURNEY
+========================================= */
+
+.coding-journey {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr 1fr 1.4fr;
+
+  gap:
+    18px;
+
+}
+
+
+.coding-card {
+
+  padding:
+    27px;
+
+  text-align:
+    center;
+
+  border-radius:
+    22px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.9
+    );
+
+  border:
+    1px solid
+    #e5e7eb;
+
+  transition:
+    transform 0.3s ease;
+
+}
+
+
+.coding-card:hover {
+
+  transform:
+    translateY(-7px);
+
+}
+
+
+.coding-icon {
+
+  font-size:
+    2rem;
+
+}
+
+
+.coding-card h3 {
+
+  margin:
+    12px 0 5px;
+
+  font-weight:
+    800;
+
+}
+
+
+.coding-card strong {
+
+  display:
+    block;
+
+  font-size:
+    2rem;
+
+  color:
+    #3b82f6;
+
+}
+
+
+.coding-card p {
+
+  color:
+    #94a3b8;
+
+  margin:
+    3px 0 12px;
+
+}
+
+
+.coding-card a {
+
+  color:
+    #2563eb;
+
+  font-size:
+    0.8rem;
+
+  text-decoration:
+    none;
+
+  font-weight:
+    700;
+
+}
+
+
+.coding-quote {
+
+  padding:
+    30px;
+
+  border-radius:
+    22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #312e81,
+      #1d4ed8
+    );
+
+  color:
+    white;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  justify-content:
+    center;
+
+}
+
+
+.coding-quote > span {
+
+  font-size:
+    4rem;
+
+  line-height:
+    1;
+
+  opacity:
+    0.5;
+
+}
+
+
+.coding-quote p {
+
+  font-size:
+    1.15rem;
+
+  line-height:
+    1.6;
+
+  font-weight:
+    600;
+
+}
+
+
+.coding-quote small {
+
+  opacity:
+    0.75;
+
+}
+
+
+/* =========================================
+   EDUCATION
+========================================= */
+
+.education-timeline {
+
+  position:
+    relative;
+
+  padding-left:
+    25px;
+
+}
+
+
+.education-timeline::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  left:
+    5px;
+
+  top:
+    0;
+
+  bottom:
+    0;
+
+  width:
+    2px;
+
+  background:
+    #dbeafe;
+
+}
+
+
+.education-item {
+
+  position:
+    relative;
+
+  padding:
+    0 0 35px 25px;
+
+}
+
+
+.timeline-dot {
+
+  position:
+    absolute;
+
+  left:
+    -26px;
+
+  top:
+    5px;
+
+  width:
+    13px;
+
+  height:
+    13px;
+
+  border-radius:
+    50%;
+
+  background:
+    #3b82f6;
+
+  box-shadow:
+    0 0 0 5px
+    #dbeafe;
+
+}
+
+
+.education-content > span {
+
+  color:
+    #3b82f6;
+
+  font-size:
+    0.8rem;
+
+  font-weight:
+    700;
+
+}
+
+
+.education-content h3 {
+
+  margin:
+    5px 0;
+
+  font-size:
+    1.2rem;
+
+  font-weight:
+    800;
+
+}
+
+
+.education-content p {
+
+  margin:
+    0 0 5px;
+
+  color:
+    #64748b;
+
+}
+
+
+.education-content strong {
+
+  font-size:
+    0.8rem;
+
+  color:
+    #475569;
+
+}
+
+
+/* =========================================
+   CONNECT
+========================================= */
+
+.connect-section {
+
+  position:
+    relative;
+
+  overflow:
+    hidden;
+
+  padding:
+    55px 35px;
+
+  border-radius:
+    30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #111827,
+      #1e1b4b
+    );
+
+  color:
+    white;
+
+  text-align:
+    center;
+
+}
+
+
+.connect-glow {
+
+  position:
+    absolute;
+
+  width:
+    280px;
+
+  height:
+    280px;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(
+      59,
+      130,
+      246,
+      0.15
+    );
+
+  filter:
+    blur(10px);
+
+  right:
+    -90px;
+
+  top:
+    -120px;
+
+  animation:
+    connectGlow 6s
+    ease-in-out infinite;
+
+}
+
+
+@keyframes connectGlow {
+
+  0%,
+  100% {
+
+    transform:
+      translate(0, 0);
+
+  }
+
+  50% {
+
+    transform:
+      translate(-20px, 25px);
+
+  }
+
+}
+
+
+.connect-content {
+
+  position:
+    relative;
+
+  z-index:
+    1;
+
+}
+
+
+.connect-label {
+
+  font-size:
+    0.75rem;
+
+  letter-spacing:
+    1.5px;
+
+  font-weight:
+    800;
+
+  color:
+    #93c5fd;
+
+}
+
+
+.connect-section h2 {
+
+  margin:
+    12px 0 15px;
+
+  font-size:
+    2.6rem;
+
+  font-weight:
+    800;
+
+}
+
+
+.connect-section p {
+
+  max-width:
+    650px;
+
+  margin:
+    auto;
+
+  line-height:
+    1.7;
+
+  color:
+    #cbd5e1;
+
+}
+
+
+.connect-buttons {
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    9px;
+
+  margin-top:
+    25px;
+
+}
+
+
+.connect-btn {
+
+  text-decoration:
+    none;
+
+  padding:
+    10px 15px;
+
+  border-radius:
+    10px;
+
+  font-size:
+    0.8rem;
+
+  font-weight:
+    700;
+
+  transition:
+    transform 0.25s ease;
+
+}
+
+
+.connect-btn:hover {
+
+  transform:
+    translateY(-4px);
+
+}
+
+
+.connect-btn.primary {
+
+  background:
+    #ffffff;
+
+  color:
+    #1e3a8a;
+
+}
+
+
+.connect-btn.secondary {
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.08
+    );
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.14
+    );
+
+  color:
+    #e2e8f0;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.developer-footer {
+
+  text-align:
+    center;
+
+  padding:
+    35px 10px 0;
+
+  color:
+    #64748b;
+
+}
+
+
+.developer-footer a {
+
+  display:
+    inline-block;
+
+  margin-top:
+    7px;
+
+  color:
+    #2563eb;
+
+  text-decoration:
+    none;
+
+  font-weight:
+    700;
+
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+html.dark-page .developer-hero h2,
+html.dark-page .developer-intro,
+html.dark-page .section-heading p {
+
+  color:
+    #94a3b8;
+
+}
+
+
+html.dark-page .developer-stat-card,
+html.dark-page .about-focus-box,
+html.dark-page .skill-group,
+html.dark-page .experience-card,
+html.dark-page .developer-project-card,
+html.dark-page .coding-card {
+
+  background:
+    #1e293b;
+
+  color:
+    #e2e8f0;
+
+  border-color:
+    #334155;
+
+}
+
+
+html.dark-page .social-btn {
+
+  background:
+    #1e293b;
+
+  color:
+    #e2e8f0;
+
+  border-color:
+    #334155;
+
+}
+
+
+html.dark-page .developer-stat-card small,
+html.dark-page .about-me-main p,
+html.dark-page .about-focus-box p,
+html.dark-page .experience-points p,
+html.dark-page .developer-project-card h4,
+html.dark-page .developer-project-card > p {
+
+  color:
+    #94a3b8;
+
+}
+
+
+html.dark-page .skill-tags span {
+
+  background:
+    #172554;
+
+  color:
+    #93c5fd;
+
+}
+
+
+html.dark-page .experience-icon,
+html.dark-page .project-icon {
+
+  background:
+    #312e81;
+
+}
+
+
+html.dark-page .project-tech span {
+
+  background:
+    #334155;
+
+  color:
+    #cbd5e1;
+
+}
+
+
+html.dark-page .github-project-btn {
+
+  background:
+    #020617;
+
+}
+
+
+html.dark-page .education-content p,
+html.dark-page .education-content strong,
+html.dark-page .developer-footer {
+
+  color:
+    #94a3b8;
+
+}
+
+
+html.dark-page .education-timeline::before {
+
+  background:
+    #334155;
+
+}
+
+
+html.dark-page .timeline-dot {
+
+  box-shadow:
+    0 0 0 5px
+    #1e3a8a;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .developer-stats {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+  }
+
+
+  .about-me-card {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .project-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .coding-journey {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .developer-page {
+
+    padding:
+      45px 14px 60px;
+
+  }
+
+
+  .developer-hero h1 {
+
+    font-size:
+      2.6rem;
+
+  }
+
+
+  .developer-hero h2 {
+
+    font-size:
+      1.1rem;
+
+  }
+
+
+  .developer-intro {
+
+    font-size:
+      0.95rem;
+
+  }
+
+
+  .developer-stats {
+
+    grid-template-columns:
+      1fr 1fr;
+
+  }
+
+
+  .developer-stat-card {
+
+    padding:
+      18px 10px;
+
+  }
+
+
+  .developer-section {
+
+    margin-bottom:
+      55px;
+
+  }
+
+
+  .section-heading h2 {
+
+    font-size:
+      1.55rem;
+
+  }
+
+
+  .skills-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .experience-card {
+
+    flex-direction:
+      column;
+
+  }
+
+
+  .experience-top {
+
+    flex-direction:
+      column;
+
+    gap:
+      5px;
+
+  }
+
+
+  .connect-section {
+
+    padding:
+      40px 20px;
+
+  }
+
+
+  .connect-section h2 {
+
+    font-size:
+      2rem;
+
+  }
+
+}
+
+
+/* =========================================
+   CONTACT POPUP
+========================================= */
+
+.contact-modal-content {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+}
+
+.contact-modal-content .modal-header,
+.contact-modal-content .modal-footer {
+  border-color: #e2e8f0;
+  padding: 18px 22px;
+}
+
+.contact-modal-content .modal-title {
+  font-weight: 800;
+}
+
+.contact-modal-icon {
+  font-size: 3rem;
+  margin: 8px 0 14px;
+}
+
+.contact-modal-description {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.contact-value-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  margin-top: 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 13px;
+  background: #f8fafc;
+  overflow-wrap: anywhere;
+}
+
+#contactModalValue {
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.contact-copy-btn,
+.contact-close-btn {
+  flex-shrink: 0;
+  padding: 9px 15px;
+  border: 0;
+  border-radius: 9px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.contact-copy-btn:hover,
+.contact-close-btn:hover {
+  transform: translateY(-2px);
+  background: #1d4ed8;
+}
+
+.contact-copy-feedback {
+  min-height: 20px;
+  margin: 12px 0 0;
+  color: #16a34a;
+  font-size: 0.85rem;
+}
+
+
+/* =========================================
+   CONTACT POPUP — DARK MODE
+========================================= */
+
+html.dark-page .contact-modal-content {
+  background: #1e293b;
+  color: #e2e8f0;
+  border-color: #334155;
+}
+
+html.dark-page .contact-modal-content .modal-header,
+html.dark-page .contact-modal-content .modal-footer {
+  border-color: #334155;
+}
+
+html.dark-page .contact-modal-content .btn-close {
+  filter: invert(1);
+}
+
+html.dark-page .contact-modal-description {
+  color: #94a3b8;
+}
+
+html.dark-page .contact-value-row {
+  background: #0f172a;
+  border-color: #475569;
+}
+
+html.dark-page #contactModalValue {
+  color: #f8fafc;
+}
+
+
+/* Make the white "Email Me" button match dark mode */
+
+html.dark-page .connect-btn.primary {
+  background: #475569;
+  color: #f8fafc;
+  border: 1px solid #475569;
+}
+
+html.dark-page .connect-btn.primary:hover {
+  background: #475569;
+  color: #ffffff;
+}
+
+
+/* Ensure popup buttons look consistent */
+
+.social-btn,
+.connect-btn {
+  font-family: inherit;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   ABOUT ME CARD — DARK MODE FIX
+========================================= */
+
+html.dark-page .about-me-card,
+body.dark-mode .about-me-card {
+  background: linear-gradient(
+    135deg,
+    #1e293b,
+    #20204a
+  );
+
+  border: 1px solid #334155;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Main heading: bright and readable */
+
+html.dark-page .about-me-main h3,
+body.dark-mode .about-me-main h3 {
+  color: #f8fafc;
+
+  font-weight: 800;
+
+  line-height: 1.4;
+}
+
+
+/* Description text */
+
+html.dark-page .about-me-main p,
+body.dark-mode .about-me-main p {
+  color: #cbd5e1;
+
+  line-height: 1.9;
+}
+
+
+/* Current Focus card */
+
+html.dark-page .about-focus-box,
+body.dark-mode .about-focus-box {
+  background: linear-gradient(
+    145deg,
+    #111827,
+    #172554
+  );
+
+  border: 1px solid #334155;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Current Focus heading */
+
+html.dark-page .about-focus-box strong,
+body.dark-mode .about-focus-box strong {
+  color: #f8fafc;
+}
+
+
+/* Current Focus description */
+
+html.dark-page .about-focus-box p,
+body.dark-mode .about-focus-box p {
+  color: #cbd5e1;
+
+  line-height: 1.8;
+}
+
+
+/* Subtle hover effect */
+
+html.dark-page .about-me-card,
+body.dark-mode .about-me-card {
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+html.dark-page .about-me-card:hover,
+body.dark-mode .about-me-card:hover {
+  border-color: #6366f1;
+
+  box-shadow: 0 18px 45px rgba(59, 130, 246, 0.12);
+}

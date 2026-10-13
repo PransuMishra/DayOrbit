@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>Indian Festival Calendar</title>
+
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+
+  <!-- Common CSS -->
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+
+  <!-- Calendar CSS -->
+  <link
+    rel="stylesheet"
+    href="calendar.css"
+  >
+
+
+  <!--
+    Read the theme selected on Home page
+  -->
+
+  <script>
+
+    if (
+      localStorage.getItem("theme") === "dark"
+    ) {
+
+      document.documentElement.classList.add(
+        "dark-page"
+      );
+
+    }
+
+  </script>
+  <link rel="stylesheet" href="branding.css">
+
+</head>
+
+
+<body>
+
+
+  <!-- ======================================
+       NAVBAR
+  ======================================= -->
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+    <div class="container-fluid">
+
+      
+<a class="navbar-brand dayorbit-brand"
+   href="index.html"
+   aria-label="DayOrbit home">
+
+    <img
+        src="assets/dayorbit-icon.png"
+        alt=""
+        class="dayorbit-mark"
+    >
+
+    <span class="dayorbit-name"><span class="day-word">Day</span><span class="orbit-word">Orbit</span></span>
+</a>
+
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarContent"
+        aria-controls="navbarContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+
+      <div
+        class="collapse navbar-collapse"
+        id="navbarContent"
+      >
+
+        
+<ul class="navbar-nav me-auto">
+
+    <!-- Home -->
+    <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+    </li>
+
+    <!-- Tools Dropdown -->
+    <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="toolsDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+        >
+            Tools
+        </a>
+
+        <ul class="dropdown-menu" aria-labelledby="toolsDropdown">
+          <li>
+            <a class="dropdown-item" href="weather.html">
+                🌤️ Weather
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="alarm.html">
+              ⏰ Alarm
+            </a>
+        </li>
+            <li>
+                <a class="dropdown-item" href="stopwatch.html">
+                    ⏱️ Stopwatch
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="timer.html">
+                    ⏳ Timer
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="calendar.html">
+                    📅 Calendar
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    <!-- Explore Dropdown -->
+    <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="exploreDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+        >
+            Explore
+        </a>
+
+        <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+            <li>
+                <a class="dropdown-item" href="about.html">
+                    ✨ About App
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="about-developer.html">
+                    👨‍💻 About Developer
+                </a>
+            </li>
+        </ul>
+    </li>
+
+</ul>
+   
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+  <!-- ======================================
+       CALENDAR PAGE
+  ======================================= -->
+
+  <main class="calendar-page">
+
+
+    <!-- Header -->
+
+    <section class="calendar-header">
+
+      <div class="calendar-badge">
+        🇮🇳 Indian Festival Calendar
+      </div>
+
+
+      <h1>
+        Calendar
+      </h1>
+
+
+      <p>
+        Explore dates, festivals and special days.
+      </p>
+
+    </section>
+
+
+
+    <!-- Return Home -->
+
+    <div class="calendar-home-row">
+
+      <a
+        href="index.html"
+        class="calendar-home-btn"
+      >
+        ← Return to Home
+      </a>
+
+    </div>
+
+
+
+    <!-- ======================================
+         CALENDAR LAYOUT
+    ======================================= -->
+
+    <section class="calendar-layout">
+
+
+      <!-- ===============================
+           CALENDAR CARD
+      ================================ -->
+
+      <div class="calendar-main-card">
+
+
+        <!-- Calendar Top -->
+
+        <div class="calendar-toolbar">
+
+
+          <button
+            id="prevMonth"
+            class="month-nav-btn"
+            type="button"
+          >
+            ←
+          </button>
+
+
+          <div class="month-title">
+
+            <h2 id="monthTitle">
+              October 2026
+            </h2>
+
+            <button
+              id="todayBtn"
+              class="today-btn"
+              type="button"
+            >
+              Today
+            </button>
+
+          </div>
+
+
+          <button
+            id="nextMonth"
+            class="month-nav-btn"
+            type="button"
+          >
+            →
+          </button>
+
+        </div>
+
+
+
+        <!-- Month / Year Search -->
+
+        <div class="date-search">
+
+          <div class="date-input-group">
+
+            <label for="monthSelect">
+              Month
+            </label>
+
+            <select id="monthSelect">
+
+              <option value="0">January</option>
+              <option value="1">February</option>
+              <option value="2">March</option>
+              <option value="3">April</option>
+              <option value="4">May</option>
+              <option value="5">June</option>
+              <option value="6">July</option>
+              <option value="7">August</option>
+              <option value="8">September</option>
+              <option value="9">October</option>
+              <option value="10">November</option>
+              <option value="11">December</option>
+
+            </select>
+
+          </div>
+
+
+          <div class="date-input-group">
+
+            <label for="yearInput">
+              Year
+            </label>
+
+            <input
+              id="yearInput"
+              type="number"
+              min="1900"
+              max="2100"
+              value="2026"
+            >
+
+          </div>
+
+
+          <button
+            id="goToDateBtn"
+            class="go-date-btn"
+            type="button"
+          >
+            Go
+          </button>
+
+        </div>
+
+
+
+        <!-- Week Days -->
+
+        <div class="calendar-weekdays">
+
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+          <div>Sun</div>
+
+        </div>
+
+
+
+        <!-- Dates -->
+
+        <div
+          id="calendarGrid"
+          class="calendar-grid"
+        >
+
+          <!-- JavaScript creates dates -->
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- ===============================
+           FESTIVAL SIDEBAR
+      ================================ -->
+
+      <aside class="festival-sidebar">
+
+
+        <div class="festival-header">
+
+          <span>
+            ✨
+          </span>
+
+          <div>
+
+            <h3>
+              Festivals
+            </h3>
+
+            <p id="festivalMonth">
+              October 2026
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div
+          id="festivalList"
+          class="festival-list"
+        >
+
+          <!-- JavaScript -->
+
+        </div>
+
+
+      </aside>
+
+    </section>
+
+
+
+    <!-- ======================================
+         SELECTED DATE
+    ======================================= -->
+
+    <section
+      id="selectedDateCard"
+      class="selected-date-card"
+    >
+
+
+      <div class="selected-date-icon">
+        📅
+      </div>
+
+
+      <div class="selected-date-content">
+
+        <span class="selected-date-label">
+          Selected Date
+        </span>
+
+
+        <h2 id="selectedDate">
+          Select a date
+        </h2>
+
+
+        <p id="selectedDayName">
+          —
+        </p>
+
+
+        <div
+          id="selectedFestival"
+          class="selected-festival"
+        >
+          No festival selected.
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- Bootstrap -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+
+  <!-- Calendar JS -->
+
+  <script src="calendar.js"></script>
+
+</body>
+
+</html>
